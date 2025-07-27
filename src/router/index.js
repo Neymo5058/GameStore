@@ -5,6 +5,7 @@ import Game from "@/views/Game.vue";
 const routes = [
   { path: "/signup", name: "SignUp", component: SignUpPage },
   { path: "/game", name: "Game", component: Game },
+  { path: "/login", name: "SignUp", component: SignUpPage },
 ];
 
 const router = createRouter({
