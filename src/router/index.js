@@ -9,7 +9,7 @@ const routes = [
   { path: "/admin/users", name: "", component: SignUpPage },
   { path: "/admin/users/add", name: "", component: SignUpPage },
   { path: "/admin/items", name: "", component: SignUpPage },
-  { path: "/admin/items/add", name: "", component: SignUpPage },
+  { path: "/admin/item/add", name: "", component: SignUpPage },
 ];
 const router = createRouter({
   history: createWebHistory(),
