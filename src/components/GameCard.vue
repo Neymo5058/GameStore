@@ -62,6 +62,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
+  height: 100vh;
 }
 
 .image-container {
