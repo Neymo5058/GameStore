@@ -42,6 +42,16 @@
 <style scoped>
 .game-section {
   background: linear-gradient(to bottom, #1b2838, #2a475e);
+  height: 100vh;
+  /* justify-content: center; */
+  align-content: center;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 .gallery-container {
   display: grid;
@@ -56,13 +66,6 @@
   background-color: #1864ab;
   border-radius: 4px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-.main-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  height: 100vh;
 }
 
 .image-container {
