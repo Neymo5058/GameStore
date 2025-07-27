@@ -44,8 +44,7 @@ header {
   font-size: 1.2rem;
 }
 
-.header__link:hover,
-.router-link-exact-active {
+.header__link:hover {
   color: #3b82f6;
 }
 </style>
