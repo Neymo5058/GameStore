@@ -1,33 +1,35 @@
-<script setup></script>
+<script setup>
+// const imageUrl = `/images/${game.imageUrl}`;
+</script>
 
 <template>
   <section class="game-section">
     <div class="main-container">
       <div class="gallery-container">
         <div>
-          <img src="../assets//pictures/img-1.jpg" alt="" />
+          <img src="/images/img-1.jpg" alt="" />
         </div>
         <div class="image-container">
           <div class="gallery-img-container">
-            <img src="../assets//pictures/img-1.jpg" alt="" />
+            <img src="/images/img-1.jpg" alt="" />
           </div>
           <div class="gallery-img-container">
-            <img src="../assets//pictures/img-2.jpg" alt="" />
+            <img src="/images/img-1.jpg" alt="" />
           </div>
           <div class="gallery-img-container">
-            <img src="../assets//pictures/img-3.jpg" alt="" />
+            <img src="/images/img-1.jpg" alt="" />
           </div>
           <div class="gallery-img-container">
-            <img src="../assets//pictures/img-4.jpg" alt="" />
+            <img src="/images/img-1.jpg" alt="" />
           </div>
           <div class="gallery-img-container">
-            <img src="../assets//pictures/img-5.jpg" alt="" />
+            <img src="/images/img-1.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="card">
         <div class="game-details">
-          <img src="../assets/pictures/game-1.jpg" alt="Arma3" />
+          <!-- <img :src="imageUrl" :alt="game.title" /> -->
         </div>
         <div class="game-picture">
           <h2></h2>

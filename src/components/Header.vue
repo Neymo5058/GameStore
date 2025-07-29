@@ -1,5 +1,5 @@
 <script setup>
-import logoUrl from "../assets/pictures/GameStore-Logo.png";
+import logoUrl from "../../public/images/GameStore-Logo.png";
 </script>
 
 <template>
