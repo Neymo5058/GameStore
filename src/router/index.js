@@ -4,7 +4,11 @@ import Game from "@/views/Game.vue";
 
 const routes = [
   { path: "/signup", name: "SignUp", component: SignUpPage },
-  { path: "/game", name: "Game", component: Game },
+  {
+    path: "/games/:id",
+    name: "Game",
+    component: () => import("../views/Game.vue"),
+  },
   { path: "/login", name: "SignUp", component: SignUpPage },
   { path: "/admin/users", name: "", component: SignUpPage },
   { path: "/admin/users/add", name: "", component: SignUpPage },

@@ -14,7 +14,7 @@ const GameController = {
     try {
       const gameId = req.params.gameId;
       console.log(gameId);
-      const game = await GameModel.findById(req.params.gameId);
+      const game = await GameModel.findById(req.params.gameId).populate("category");
       if (!game) {
         return res.status(404).json({
           status: "fail",

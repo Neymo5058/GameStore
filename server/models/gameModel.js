@@ -8,35 +8,44 @@ const GameSchema = new mongoose.Schema(
       unique: true,
       trim: true,
     },
+    description: {
+      type: String,
+      trim: true,
+    },
     price: {
       type: Number,
       required: [true, "A game must have a price"],
       min: 0,
     },
-    description: {
-      type: String,
-      trim: true,
+    reviews: {
+      type: Number,
+      required: false,
     },
     platform: {
       type: String,
       enum: ["PC", "PS5", "Xbox", "Switch"],
       required: [true, "A game must have a platform"],
     },
+    releaseDate: {
+      type: String,
+      required: false,
+    },
+    developer: {
+      type: String,
+      required: false,
+    },
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
       required: [true, "A game must have a category"],
     },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
     imageUrl: {
       type: String,
       required: true,
     },
-    languages: {
-      type: [String],
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
       required: false,
     },
   },
