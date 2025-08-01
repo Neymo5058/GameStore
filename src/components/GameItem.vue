@@ -1,0 +1,61 @@
+<script setup>
+import { useRouter } from "vue-router";
+const { game } = defineProps({
+  game: {
+    type: Object,
+    required: true,
+  },
+});
+
+const router = useRouter();
+function showGameDetails() {
+  router.push(`/games/${game._id}`);
+  console.log(game);
+}
+</script>
+
+<template>
+  <div class="game-items" @click="showGameDetails">
+    <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
+    <div class="game-details">
+      <h2 class="game-title">
+        <strong>{{ game.title }}</strong>
+      </h2>
+      <p class="game-price">{{ game.price }} $</p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.game-items {
+  background: #1864ab;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.game-items h2 {
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.game-items p {
+  color: #f8f9fa;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.game-img {
+  width: 100%;
+
+  object-fit: cover;
+}
+</style>

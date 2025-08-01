@@ -1,0 +1,135 @@
+[
+    {
+        "title": "Arma 3",
+        "description": "Experience true combat gameplay in a massive military sandbox. Deploying a wide variety of single- and multiplayer content, over 20 vehicles and 40 weapons, and limitless opportunities for content creation, this is the PC’s premier military game. Authentic, diverse, open - Arma 3 sends you to war.",
+        "price": 52,
+        "reviews": 4.5,
+        "platform": "PC",
+        "releaseDate": "2013-09-12",
+        "developer": "Bohemia Interactive",
+        "category": "688b9e8ef8cdd82d0e59bb35",
+        "imageUrl": "game-1"
+    },
+    {
+        "title": "Age of Empires IV",
+        "description": "Celebrating its first year of delighting millions of global players, the award-winning and best-selling strategy franchise continues with Age of Empires IV: Anniversary Edition, putting you at the center of even more epic historical battles that shaped the world.",
+        "price": 69.99,
+        "reviews": 4.1,
+        "platform": "PC",
+        "releaseDate": "2021-10-28",
+        "developer": "World's Edge, Relic Entertainment",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-2"
+    },
+    {
+        "title": "Diablo IV",
+        "description": "Join the fight for Sanctuary in Diablo® IV, the ultimate action RPG adventure. Experience the critically acclaimed campaign and new seasonal content.",
+        "price": 89.99,
+        "reviews": 3.8,
+        "platform": "PC",
+        "releaseDate": "2023-10-17",
+        "developer": "Blizzard Entertainment, Inc.",
+        "publisher": "Blizzard Entertainment, Inc.",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-3"
+    },
+    {
+        "title": "EA SPORTS FC 25",
+        "description": "EA SPORTS FC™ 25 gives you more ways to win for the club. Team up with friends in your favourite modes with the new 5v5 Rush, and manage your club to victory as FC IQ delivers more tactical control than ever before.",
+        "price": 79.99,
+        "reviews": 4.9,
+        "platform": "PS5",
+        "releaseDate": "2024-09-26",
+        "developer": "EA Canada, EA Romania",
+        "category": "688b9eacf8cdd82d0e59bb37",
+        "imageUrl": "game-4"
+    },
+    {
+        "title": "Mafia: The Old Country",
+        "description": "Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily. Fight to survive as Enzo Favara and prove your worth to the Family in this immersive third-person action-adventure.",
+        "price": 69.99,
+        "reviews": 4,
+        "platform": "PC",
+        "releaseDate": "2025-08-07",
+        "developer": "Hangar 13",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-12"
+    },
+    {
+        "title": "NARAKA: BLADEPOINT",
+        "description": "Dive into the legends of the Far East in NARAKA: BLADEPOINT; team up with friends in fast-paced melee fights for a Battle Royale experience unlike any other. Find your playstyle with a varied cast of heroes with unique skills. More than 20 million players have already joined the fray, play free now!",
+        "price": 60,
+        "reviews": 3.6,
+        "platform": "PC",
+        "releaseDate": "2021-08-11",
+        "developer": "24 Entertainment",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-5"
+    },
+    {
+        "title": "Borderlands 4",
+        "description": "Borderlands 4 is a mayhem-fueled looter shooter, jam-packed with billions of weapons, deadly enemies, and intense co-op action. Break free from a dangerous hidden planet as one of four new badass Vault Hunters.",
+        "price": 79.99,
+        "reviews": 4.2,
+        "platform": "PC",
+        "releaseDate": "2025-09-12",
+        "developer": "Gearbox Software",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-6"
+    },
+    {
+        "title": "NBA 2K25",
+        "description": "Command every court with authenticity and realism Powered by ProPLAY™, giving you ultimate control over how you play in NBA 2K25. Define your legacy in MyCAREER, MyTEAM, MyNBA, and The W.",
+        "price": 79.99,
+        "reviews": 4.3,
+        "platform": "PC",
+        "releaseDate": "2024-10-28",
+        "developer": "Visual Concepts",
+        "category": "688b9eacf8cdd82d0e59bb37",
+        "imageUrl": "game-7"
+    },
+    {
+        "title": "Forza Horizon 5",
+        "description": "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world’s greatest cars.",
+        "price": 74.99,
+        "reviews": 4.8,
+        "platform": "PC",
+        "releaseDate": "2021-11-08",
+        "developer": "Playground Games",
+        "category": "688a3bc554ffa38c0ed46296",
+        "imageUrl": "game-8"
+    },
+    {
+        "title": "Warhammer 40K: Space Marine II",
+        "description": "Embody the superhuman skill and brutality of a Space Marine. Unleash deadly abilities and devastating weaponry to obliterate the relentless Tyranid swarms. Defend the Imperium in spectacular third-person action in solo or multiplayer modes.",
+        "price": 79.99,
+        "reviews": 4.4,
+        "platform": "PC",
+        "releaseDate": "2024-09-09",
+        "developer": "Saber Interactive",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-9"
+    },
+    {
+        "title": "Cyberpunk 2077",
+        "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification.",
+        "price": 59.99,
+        "reviews": 4.5,
+        "platform": "PC",
+        "releaseDate": "2020-12-10",
+        "developer": "CD Projekt Red",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-10"
+    },
+    {
+        "title": "Red Dead Redemption 2",
+        "description": "Red Dead Redemption 2 is an epic tale of life in America at the dawn of the modern age. Ride across the vast, unforgiving heartland of America in a sprawling open-world adventure.",
+        "price": 69.99,
+        "reviews": 4.6,
+        "platform": "PC",
+        "releaseDate": "2019-11-05",
+        "developer": "Rockstar Games",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-11"
+    }
+]
