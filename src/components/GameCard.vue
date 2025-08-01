@@ -42,7 +42,7 @@ function formatDate(date) {
       </div>
 
       <div class="card">
-        <img :src="'/images/' + game.imageUrl" />
+        <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
         <div class="infos-container">
           <h2 class="game-header">{{ game.title }}</h2>
           <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>

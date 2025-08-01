@@ -6,9 +6,9 @@ import logoUrl from "../../public/images/GameStore-Logo.png";
   <header>
     <div class="header__content">
       <img :src="logoUrl" alt="Logo" class="header__logo" />
-      <router-link to="/store" class="header__link">Store</router-link>
+      <router-link to="/" class="header__link">Store</router-link>
       <router-link to="/login" class="header__link">Login</router-link>
-      <router-link to="/about" class="header__link">About</router-link>
+      <router-link :to="{ path: '/', hash: '#footer' }" class="header__link">About</router-link>
     </div>
   </header>
 </template>

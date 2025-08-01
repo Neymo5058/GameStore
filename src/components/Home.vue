@@ -1,9 +1,10 @@
-<script setup></script>
+<script setup>
+import { useGameStore } from "../stores/games";
+import { onMounted, computed } from "vue";
+</script>
 
 <template>
-  <section>
-    <div></div>
-  </section>
+  <section></section>
 </template>
 
 <style scoped></style>

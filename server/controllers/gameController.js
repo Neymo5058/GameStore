@@ -6,7 +6,6 @@ const GameController = {
       const newGame = await GameModel.create(req.body);
       res.status(201).json(newGame);
     } catch (err) {
-      // console.error(err);
       res.status(500).json({ message: "The game could not be created." });
     }
   },
@@ -28,6 +27,36 @@ const GameController = {
       });
     } catch (err) {
       res.status(500).json({ message: "Can not get this game" });
+    }
+  },
+  batchCreate: async (req, res, next) => {
+    try {
+      const games = await GameModel.create(req.body, {
+        ordered: false,
+      });
+
+      const savedGames = await GameModel.find({
+        _id: { $in: games.map((game) => game._id) },
+      });
+      res.status(201).json({
+        status: "success",
+        data: {
+          games: savedGames,
+        },
+      });
+    } catch (err) {
+      next(err);
+    }
+  },
+  async getItems(req, res) {
+    try {
+      const games = await GameModel.find().populate("category");
+      res.status(200).json({
+        status: "success",
+        data: { games },
+      });
+    } catch (err) {
+      res.status(500).json({ message: "Cannot get games." });
     }
   },
 };
