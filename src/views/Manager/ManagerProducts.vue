@@ -1,25 +1,39 @@
 <template>
-  <div class="home">
+  <div class="manager-products">
     <NavBar />
+
+    <!-- Manager toolbar -->
+    <div class="manager-toolbar">
+      <router-link to="/admin" class="toolbar-button">Users</router-link>
+      <router-link to="/manager/add" class="toolbar-button">Add Product</router-link>
+    </div>
+
     <main class="content">
       <div class="games-grid">
-        <router-link
+        <div
+          class="game-card"
           v-for="game in pagedGames"
           :key="game.id"
-          :to="`/game/${game.id}`"
-          class="game-card-link"
         >
-          <div class="game-card">
-            <img :src="game.image" class="game-img" />
-            <div class="price-bar">
-              <span class="price-info">
-                <span class="title">{{ game.title }}</span>
-                <span class="price">${{ game.price }}</span>
-              </span>
-            </div>
+          <img :src="game.image" class="game-img" />
+          <div class="price-bar">
+            <span class="price-info">
+              <span class="title">{{ game.title }}</span>
+              <span class="price">${{ game.price }}</span>
+            </span>
+            <span class="bar-icons">
+              <!-- EDIT ICON: routes to /manager/edit/:id -->
+              <button class="icon-btn" @click.stop="editGame(game.id)">
+                <ion-icon name="create-outline"></ion-icon>
+              </button>
+              <button class="icon-btn" @click.stop="deleteGame(game.id)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </span>
           </div>
-        </router-link>
+        </div>
       </div>
+      <!-- Pagination -->
       <div class="pagination">
         <button @click="prevPage" :disabled="page === 1">‹</button>
         <button
@@ -31,16 +45,19 @@
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
+
     <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
-import { useGameStore } from '../store/gamestore'
+import { useRouter } from 'vue-router'
+import { useGameStore } from '../../store/gamestore'
+import NavBar from '../../components/NavBar.vue'
+import Footer from '../../components/Footer.vue'
 
+const router = useRouter()
 const gameStore = useGameStore()
 
 onMounted(() => {
@@ -56,18 +73,24 @@ const totalPages = computed(() =>
 const pagedGames = computed(() =>
   gameStore.list.slice((page.value - 1) * pageSize, page.value * pageSize)
 )
-
 function prevPage() { if (page.value > 1) page.value-- }
 function nextPage() { if (page.value < totalPages.value) page.value++ }
+
+function editGame(id) {
+  router.push(`/manager/edit/${id}`)
+}
+function deleteGame(id) {
+  if (confirm('Delete this game?')) {
+    gameStore.deleteGame(id)
+  }
+}
 </script>
 
 <style scoped>
-.home {
+.manager-products {
   background: #243248;
   min-height: 100vh;
 }
-
-/* Manager toolbar */
 .manager-toolbar {
   display: flex;
   gap: 1rem;
@@ -81,8 +104,6 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   border-radius: 4px;
   text-decoration: none;
 }
-
-/* grid of cards */
 .content {
   max-width: 1200px;
   margin: 2rem auto;
@@ -94,13 +115,6 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   gap: 2rem;
   margin: 0 auto;
 }
-
-.game-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
 .game-card {
   position: relative;
   width: 320px;
@@ -115,7 +129,6 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
 .game-card:hover {
   transform: translateY(-6px) scale(1.03);
 }
-
 .game-img {
   width: 100%;
   height: 200px;
@@ -123,60 +136,71 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   background: #243248;
   display: block;
 }
-
 .price-bar {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   background: #535bc9;
-  padding: 1rem;
+  padding: 0.9rem 0.9rem 0.85rem 0.9rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   box-sizing: border-box;
+  gap: 0.7rem;
 }
-
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
 .title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 65%;
-  display: inline-block;
+  font-weight: 400;
+  max-width: 140px;
+  min-width: 0;
 }
-
 .price {
   font-weight: bold;
   margin-left: 0.5rem;
-  flex-shrink: 0;
   white-space: nowrap;
+  flex-shrink: 0;
   font-size: 1.15em;
 }
-
-/* manager-specific icons */
-.card-actions {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+.bar-icons {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.3rem;
+  flex-shrink: 0;
 }
-.card-actions button {
-  background: rgba(0,0,0,0.5);
-  border: none;
-  padding: 0.25rem;
-  border-radius: 4px;
+.icon-btn {
+  background: #2c3eeb;
+  border: 2px solid #1a2a5a;
+  border-radius: 6px;
+  padding: 2px 8px 2px 8px;
   color: #fff;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  margin-left: 0;
 }
-.card-actions button:hover {
-  background: rgba(0,0,0,0.7);
+.icon-btn:hover {
+  background: #4459d7;
+  border-color: #3647a7;
 }
-
-/* pagination */
+.icon-btn ion-icon {
+  font-size: 1.15em;
+  vertical-align: middle;
+}
 .pagination {
   display: flex;
   justify-content: center;
