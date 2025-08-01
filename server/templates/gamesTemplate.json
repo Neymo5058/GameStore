@@ -45,17 +45,6 @@
         "imageUrl": "game-4"
     },
     {
-        "title": "Mafia: The Old Country",
-        "description": "Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily. Fight to survive as Enzo Favara and prove your worth to the Family in this immersive third-person action-adventure.",
-        "price": 69.99,
-        "reviews": 4,
-        "platform": "PC",
-        "releaseDate": "2025-08-07",
-        "developer": "Hangar 13",
-        "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-12"
-    },
-    {
         "title": "NARAKA: BLADEPOINT",
         "description": "Dive into the legends of the Far East in NARAKA: BLADEPOINT; team up with friends in fast-paced melee fights for a Battle Royale experience unlike any other. Find your playstyle with a varied cast of heroes with unique skills. More than 20 million players have already joined the fray, play free now!",
         "price": 60,
@@ -112,13 +101,13 @@
     },
     {
         "title": "Cyberpunk 2077",
-        "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification.",
-        "price": 59.99,
-        "reviews": 4.5,
+        "description": "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.",
+        "price": 37.7,
+        "reviews": 4.1,
         "platform": "PC",
-        "releaseDate": "2020-12-10",
-        "developer": "CD Projekt Red",
-        "category": "68883d77c4303ac5b36a68eb",
+        "releaseDate": "2021-09-22",
+        "developer": "CD PROJEKT RED",
+        "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-10"
     },
     {
@@ -131,5 +120,280 @@
         "developer": "Rockstar Games",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-11"
+    },
+    {
+        "title": "Mafia: The Old Country",
+        "description": "Uncover the origins of organized crime in Mafia: The Old Country, a gritty mob story set in the brutal underworld of 1900s Sicily. Fight to survive as Enzo Favara and prove your worth to the Family in this immersive third-person action-adventure.",
+        "price": 69.99,
+        "reviews": 4,
+        "platform": "PC",
+        "releaseDate": "2025-08-07",
+        "developer": "Hangar 13",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-12"
+    },
+    {
+        "title": "Half-Life 2",
+        "description": "Reawakened from stasis in the occupied metropolis of City 17, Gordon Freeman is joined by Alyx Vance as he leads a desperate human resistance. Experience the landmark first-person shooter packed with immersive world-building, boundary-pushing physics, and exhilarating combat.",
+        "price": 67.85,
+        "reviews": 3.8,
+        "platform": "PC",
+        "releaseDate": "2004-11-16",
+        "developer": "Valve",
+        "category": "688b9e8ef8cdd82d0e59bb35",
+        "imageUrl": "game-13"
+    },
+    {
+        "title": "Portal 2",
+        "description": "The Perpetual Testing Initiative has been expanded to allow you to design co-op puzzles for you and your friends!",
+        "price": 60.0,
+        "reviews": 3.6,
+        "platform": "PC",
+        "releaseDate": "2021-02-24",
+        "developer": "Valve",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-14"
+    },
+    {
+        "title": "Left 4 Dead 2",
+        "description": "Set in the zombie apocalypse, Left 4 Dead 2 (L4D2) is the highly anticipated sequel to the award-winning Left 4 Dead, the #1 co-op game of 2008. This co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns.",
+        "price": 49.97,
+        "reviews": 4.0,
+        "platform": "PC",
+        "releaseDate": "2009-11-17",
+        "developer": "Valve",
+        "category": "688b9e8ef8cdd82d0e59bb35",
+        "imageUrl": "game-15"
+    },
+    {
+        "title": "Dota 2",
+        "description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.",
+        "price": 69.24,
+        "reviews": 3.7,
+        "platform": "PC",
+        "releaseDate": "2013-07-09",
+        "developer": "Valve",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-16"
+    },
+    {
+        "title": "Counter-Strike: Global Offensive",
+        "description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+        "price": 44.52,
+        "reviews": 4.4,
+        "platform": "PC",
+        "releaseDate": "2012-08-21",
+        "developer": "Valve",
+        "category": "688b9e8ef8cdd82d0e59bb35",
+        "imageUrl": "game-17"
+    },
+    {
+        "title": "Team Fortress 2",
+        "description": "This is a popular Steam game offering immersive gameplay and engaging content.",
+        "price": 69.48,
+        "reviews": 4.0,
+        "platform": "PC",
+        "releaseDate": "2007-10-10",
+        "developer": "Valve",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-18"
+    },
+    {
+        "title": "Rust",
+        "description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other survivors. Do whatever it takes to last another night.",
+        "price": 63.36,
+        "reviews": 4.0,
+        "platform": "PC",
+        "releaseDate": "2021-07-24",
+        "developer": "Facepunch Studios",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-19"
+    },
+    {
+        "title": "ARK: Survival Evolved",
+        "description": "This is a popular Steam game offering immersive gameplay and engaging content.",
+        "price": 67.09,
+        "reviews": 4.2,
+        "platform": "PC",
+        "releaseDate": "2020-12-09",
+        "developer": "Studio Wildcard",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-20"
+    },
+    {
+        "title": "Hogwarts Legacy",
+        "description": "Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.",
+        "price": 37.7,
+        "reviews": 4.1,
+        "platform": "PC",
+        "releaseDate": "2023-02-10",
+        "developer": "Avalanche Software",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-21"
+    },
+    {
+        "title": "The Witcher 3: Wild Hunt",
+        "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
+        "price": 58.78,
+        "reviews": 4.0,
+        "platform": "PC",
+        "releaseDate": "2015-05-18",
+        "developer": "CD PROJEKT RED",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-22"
+    },
+    {
+        "title": "Grand Theft Auto V",
+        "description": "Experience entertainment blockbusters Grand Theft Auto V and Grand Theft Auto Online — now upgraded for a new generation with stunning visuals, faster loading, 3D audio, and more, plus exclusive content for GTA Online players.",
+        "price": 40.54,
+        "reviews": 4.6,
+        "platform": "PC",
+        "releaseDate": "2013-09-17",
+        "developer": "Rockstar North",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-23"
+    },
+    {
+        "title": "Bully: Scholarship Edition",
+        "description": "Bully tells the story of mischievous 15-year-old Jimmy Hopkins as he goes through the hilarity and awkwardness of adolescence. Beat the jocks at dodge ball, play pranks on the preppies, save the nerds, kiss the girl and navigate the social hierarchy in the worst school around.",
+        "price": 45.76,
+        "reviews": 3.9,
+        "platform": "PC",
+        "releaseDate": "2008-10-21",
+        "developer": "Rockstar New England",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-24"
+    },
+    {
+        "title": "Dark Souls III",
+        "description": "Dark Souls continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!",
+        "price": 67.7,
+        "reviews": 4.8,
+        "platform": "PC",
+        "releaseDate": "2016-04-11",
+        "developer": "FromSoftware, Inc.",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-25"
+    },
+    {
+        "title": "Sekiro: Shadows Die Twice",
+        "description": "Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.",
+        "price": 44.95,
+        "reviews": 4.7,
+        "platform": "PC",
+        "releaseDate": "2019-03-21",
+        "developer": "FromSoftware, Inc.",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-26"
+    },
+    {
+        "title": "Elden Ring",
+        "description": "THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+        "price": 59.13,
+        "reviews": 3.6,
+        "platform": "PC",
+        "releaseDate": "2022-02-14",
+        "developer": "FromSoftware, Inc.",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-27"
+    },
+    {
+        "title": "Hades",
+        "description": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+        "price": 49.79,
+        "reviews": 3.8,
+        "platform": "PC",
+        "releaseDate": "2020-09-17",
+        "developer": "Supergiant Games",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-28"
+    },
+    {
+        "title": "Stardew Valley",
+        "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+        "price": 67.4,
+        "reviews": 4.2,
+        "platform": "PC",
+        "releaseDate": "2016-02-26",
+        "developer": "ConcernedApe",
+        "category": "6888cbf8c4303ac5b36a68ed",
+        "imageUrl": "game-29"
+    },
+    {
+        "title": "Terraria",
+        "description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+        "price": 42.95,
+        "reviews": 4.7,
+        "platform": "PC",
+        "releaseDate": "2011-05-16",
+        "developer": "Re-Logic",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-30"
+    },
+    {
+        "title": "Don't Starve Together",
+        "description": "Fight, Farm, Build and Explore Together in the standalone multiplayer expansion to the uncompromising wilderness survival game, Don't Starve.",
+        "price": 48.78,
+        "reviews": 4.5,
+        "platform": "PC",
+        "releaseDate": "2016-04-21",
+        "developer": "Klei Entertainment",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-31"
+    },
+    {
+        "title": "Subnautica",
+        "description": "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+        "price": 72.45,
+        "reviews": 4.7,
+        "platform": "PC",
+        "releaseDate": "2018-01-23",
+        "developer": "Unknown Worlds Entertainment",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-32"
+    },
+    {
+        "title": "No Man's Sky",
+        "description": "No Man's Sky is a game about exploration and survival in an infinite procedurally generated universe.",
+        "price": 73.76,
+        "reviews": 4.3,
+        "platform": "PC",
+        "releaseDate": "2016-08-12",
+        "developer": "Hello Games",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-33"
+    },
+    {
+        "title": "The Forest",
+        "description": "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator.",
+        "price": 28.89,
+        "reviews": 4.7,
+        "platform": "PC",
+        "releaseDate": "2028-04-30",
+        "developer": "Endnight Games Ltd",
+        "category": "6888d18dc4303ac5b36a68f1",
+        "imageUrl": "game-34"
+    },
+    {
+        "title": "Valheim",
+        "description": "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin’s patronage!",
+        "price": 77.69,
+        "reviews": 3.9,
+        "platform": "PC",
+        "releaseDate": "2021-02-02",
+        "developer": "Iron Gate AB",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-35"
+    },
+    {
+        "title": "Phasmophobia",
+        "description": "Phasmophobia is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it’s up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.",
+        "price": 32.25,
+        "reviews": 4.9,
+        "platform": "PC",
+        "releaseDate": "2020-09-18",
+        "developer": "Kinetic Games",
+        "category": "68883d77c4303ac5b36a68eb",
+        "imageUrl": "game-36"
     }
 ]
