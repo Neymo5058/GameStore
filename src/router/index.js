@@ -4,26 +4,15 @@ import Game from "@/views/Game.vue";
 import HomePage from "@/views/HomePage.vue";
 
 const routes = [
+  { path: "/", name: "Home", component: HomePage },
   { path: "/signup", name: "SignUp", component: SignUpPage },
-  {
-    path: "/games/:id",
-    name: "Game",
-    component: () => import("../views/Game.vue"),
-  },
-  { path: "/login", name: "SignUp", component: SignUpPage },
-  { path: "/admin/users", name: "", component: SignUpPage },
-  { path: "/admin/users/add", name: "", component: SignUpPage },
-  { path: "/admin/items", name: "", component: SignUpPage },
-  { path: "/admin/item/add", name: "", component: SignUpPage },
-  {
-    path: "/",
+  { path: "/login", name: "Login", component: SignUpPage },
 
-    component: HomePage,
-  },
-  {
-    path: "/",
-    component: HomePage,
-  },
+  { path: "/games/:id", name: "GameDetail", component: Game },
+  { path: "/admin/users", name: "AdminUsers", component: SignUpPage },
+  { path: "/admin/users/add", name: "AdminAddUser", component: SignUpPage },
+  { path: "/admin/items", name: "AdminItems", component: SignUpPage },
+  { path: "/admin/item/add", name: "AdminAddItem", component: SignUpPage },
 ];
 const router = createRouter({
   history: createWebHistory(),

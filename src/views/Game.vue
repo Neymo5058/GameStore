@@ -3,6 +3,7 @@ import GameCard from "@/components/GameCard.vue";
 import axios from "axios";
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import { useGameStore } from "@/stores/games";
 
 const route = useRoute();
 const game = ref(null);

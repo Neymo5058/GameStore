@@ -19,9 +19,10 @@ onMounted(() => {
 <style scoped>
 .game-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
+  grid-template-columns: repeat(3, 1fr);
   background: linear-gradient(to bottom, #1b2838, #2a475e);
+  grid-template-columns: repeat(3, 1fr);
 }
 </style>
