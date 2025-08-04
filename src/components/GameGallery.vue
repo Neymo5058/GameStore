@@ -42,7 +42,6 @@ const selectedImage = ref(gallery[0]);
   width: 100%;
   max-height: 400px;
   object-fit: contain;
-  border-radius: 8px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
