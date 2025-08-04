@@ -4,19 +4,21 @@ import axios from "axios";
 
 export const useGameStore = defineStore("games", {
   state: () => ({
-    games: [],
+    games: ref([]),
+    currentPage: 1,
+    totalPages: 3,
     isLoading: false,
-    error: null,
   }),
   actions: {
-    async fetchGames() {
+    async fetchGames(page = 1) {
       this.isLoading = true;
-      this.error = null;
       try {
-        const response = await axios.get("/api/games");
-        this.games = response.data.data.games || [];
+        const response = await axios.get(`/api/games?page=${page}&limit=12`);
+        this.games = response.data.data.games;
+        this.currentPage = response.data.data.currentPage;
+        this.totalPages = response.data.data.totalPages;
       } catch (err) {
-        this.error = err.response?.data?.message || "Failed";
+        console.error("Erreur fetch games:", err);
       } finally {
         this.isLoading = false;
       }

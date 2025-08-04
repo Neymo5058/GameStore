@@ -8,7 +8,8 @@
         "releaseDate": "2013-09-12",
         "developer": "Bohemia Interactive",
         "category": "688b9e8ef8cdd82d0e59bb35",
-        "imageUrl": "game-1"
+        "imageUrl": "game-1",
+        "gallery": ["arma-1.jpg", "arma-2.jpg", "arma3.jpg", "arma-4.jpg"]
     },
     {
         "title": "Age of Empires IV",
@@ -19,7 +20,8 @@
         "releaseDate": "2021-10-28",
         "developer": "World's Edge, Relic Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-2"
+        "imageUrl": "game-2",
+        "gallery": ["age-of-Empire-1.jpg", "age-of-Empire-2.jpg", "age-of-Empire-3.jpg", "age-of-Empire-4.jpg"]
     },
     {
         "title": "Diablo IV",
@@ -31,7 +33,8 @@
         "developer": "Blizzard Entertainment, Inc.",
         "publisher": "Blizzard Entertainment, Inc.",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-3"
+        "imageUrl": "game-3",
+        "gallery": ["Diablo-IV-1.jpg", "Diablo-IV-2.jpg", "Diablo-IV-3.jpg", "Diablo-IV-4.jpg"]
     },
     {
         "title": "EA SPORTS FC 25",
@@ -42,7 +45,8 @@
         "releaseDate": "2024-09-26",
         "developer": "EA Canada, EA Romania",
         "category": "688b9eacf8cdd82d0e59bb37",
-        "imageUrl": "game-4"
+        "imageUrl": "game-4",
+        "gallery": ["EA-SPORTS-FC-25-1.jpg", "EA-SPORTS-FC-25-2.jpg", "EA-SPORTS-FC-25-3.jpg", "EA-SPORTS-FC-25-4.jpg"]
     },
     {
         "title": "NARAKA: BLADEPOINT",
@@ -53,7 +57,8 @@
         "releaseDate": "2021-08-11",
         "developer": "24 Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-5"
+        "imageUrl": "game-5",
+        "gallery": ["NARAKA-1.jpg", "NARAKA-2.jpg", "NARAKA-3.jpg", "NARAKA-4.jpg"]
     },
     {
         "title": "Borderlands 4",
@@ -64,7 +69,8 @@
         "releaseDate": "2025-09-12",
         "developer": "Gearbox Software",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-6"
+        "imageUrl": "game-6",
+        "gallery": ["Borderlands-1.jpg", "Borderlands-2.jpg", "Borderlands-3.jpg", "Borderlands-4.jpg"]
     },
     {
         "title": "NBA 2K25",
@@ -75,7 +81,8 @@
         "releaseDate": "2024-10-28",
         "developer": "Visual Concepts",
         "category": "688b9eacf8cdd82d0e59bb37",
-        "imageUrl": "game-7"
+        "imageUrl": "game-7",
+        "gallery": ["NBA2K25-1.jpg", "NBA2K25-2.jpg", "NBA2K25-3.jpg", "NBA2K25-4.jpg"]
     },
     {
         "title": "Forza Horizon 5",
@@ -86,10 +93,11 @@
         "releaseDate": "2021-11-08",
         "developer": "Playground Games",
         "category": "688a3bc554ffa38c0ed46296",
-        "imageUrl": "game-8"
+        "imageUrl": "game-8",
+        "gallery": ["Forza Horizon5-1.jpg", "Forza Horizon5-2.jpg", "Forza Horizon5-3.jpg", "Forza Horizon5-4.jpg"]
     },
     {
-        "title": "Warhammer 40K: Space Marine II",
+        "title": "Warhammer 40,000: Space Marine 2",
         "description": "Embody the superhuman skill and brutality of a Space Marine. Unleash deadly abilities and devastating weaponry to obliterate the relentless Tyranid swarms. Defend the Imperium in spectacular third-person action in solo or multiplayer modes.",
         "price": 79.99,
         "reviews": 4.4,
@@ -97,7 +105,8 @@
         "releaseDate": "2024-09-09",
         "developer": "Saber Interactive",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-9"
+        "imageUrl": "game-9",
+        "gallery": ["Space Marine II-1.jpg", "Space Marine II-2.jpg", "Space Marine II-3.jpg", "Space Marine II-4.jpg"]
     },
     {
         "title": "Cyberpunk 2077",
@@ -108,7 +117,8 @@
         "releaseDate": "2021-09-22",
         "developer": "CD PROJEKT RED",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-10"
+        "imageUrl": "game-10",
+        "gallery": ["Cyberpunk 2077-1.jpg", "Cyberpunk 2077-2.jpg", "Cyberpunk 2077-3.jpg", "Cyberpunk 2077-4.jpg"]
     },
     {
         "title": "Red Dead Redemption 2",
@@ -119,7 +129,8 @@
         "releaseDate": "2019-11-05",
         "developer": "Rockstar Games",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-11"
+        "imageUrl": "game-11",
+        "gallery": ["Red-Dead-Redemption-1.jpg", "Red-Dead-Redemption-2.jpg", "Red-Dead-Redemption-3.jpg", "Red-Dead-Redemption-4.jpg"]
     },
     {
         "title": "Mafia: The Old Country",
@@ -130,7 +141,8 @@
         "releaseDate": "2025-08-07",
         "developer": "Hangar 13",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-12"
+        "imageUrl": "game-12",
+        "gallery": ["Mafia-The-Old-Country-1.jpg", "Mafia-The-Old-Country-2.jpg", "Mafia-The-Old-Country-3.jpg", "Mafia-The-Old-Country-4.jpg"]
     },
     {
         "title": "Half-Life 2",
@@ -141,7 +153,8 @@
         "releaseDate": "2004-11-16",
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
-        "imageUrl": "game-13"
+        "imageUrl": "game-13",
+        "gallery": ["Half-Life-1.jpg", "Half-Life-2.jpg", "Half-Life-3.jpg", "Half-Life-4.jpg"]
     },
     {
         "title": "Portal 2",
@@ -152,7 +165,8 @@
         "releaseDate": "2021-02-24",
         "developer": "Valve",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-14"
+        "imageUrl": "game-14",
+        "gallery": ["Portal-1.jpg", "Portal-2.jpg", "Portal-3.jpg", "Portal-4.jpg"]
     },
     {
         "title": "Left 4 Dead 2",
@@ -163,7 +177,8 @@
         "releaseDate": "2009-11-17",
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
-        "imageUrl": "game-15"
+        "imageUrl": "game-15",
+        "gallery": ["Left-4-Dead-1.jpg", "Left-4-Dead-2.jpg", "Left-4-Dead-3.jpg", "Left-4-Dead-4.jpg"]
     },
     {
         "title": "Dota 2",
@@ -174,7 +189,8 @@
         "releaseDate": "2013-07-09",
         "developer": "Valve",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-16"
+        "imageUrl": "game-16",
+        "gallery": ["Dota-1.jpg", "Dota-2.jpg", "Dota-3.jpg", "Dota-4.jpg"]
     },
     {
         "title": "Counter-Strike: Global Offensive",
@@ -185,7 +201,8 @@
         "releaseDate": "2012-08-21",
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
-        "imageUrl": "game-17"
+        "imageUrl": "game-17",
+        "gallery": ["Counter-Strike-Global-Offensive-1.jpg", "Counter-Strike-Global-Offensive-2.jpg", "Counter-Strike-Global-Offensive-3.jpg", "Counter-Strike-Global-Offensive-4.jpg"]
     },
     {
         "title": "Team Fortress 2",
@@ -196,7 +213,8 @@
         "releaseDate": "2007-10-10",
         "developer": "Valve",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-18"
+        "imageUrl": "game-18",
+        "gallery": ["Team-Fortress-2-1.jpg", "Team-Fortress-2-2.jpg", "Team-Fortress-2-3.jpg", "Team-Fortress-2-4.jpg"]
     },
     {
         "title": "Rust",
@@ -207,7 +225,8 @@
         "releaseDate": "2021-07-24",
         "developer": "Facepunch Studios",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-19"
+        "imageUrl": "game-19",
+        "gallery": ["Rust-1.jpg", "Rust-2.jpg", "Rust-3.jpg", "Rust-4.jpg"]
     },
     {
         "title": "ARK: Survival Evolved",
@@ -218,7 +237,8 @@
         "releaseDate": "2020-12-09",
         "developer": "Studio Wildcard",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-20"
+        "imageUrl": "game-20",
+        "gallery": ["ARK-Survival-Evolved-1.jpg", "ARK-Survival-Evolved-2.jpg", "ARK-Survival-Evolved-3.jpg", "ARK-Survival-Evolved-4.jpg"]
     },
     {
         "title": "Hogwarts Legacy",
@@ -229,7 +249,8 @@
         "releaseDate": "2023-02-10",
         "developer": "Avalanche Software",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-21"
+        "imageUrl": "game-21",
+        "gallery": ["Hogwarts-Legacy-1.jpg", "Hogwarts-Legacy-2.jpg", "Hogwarts-Legacy-3.jpg", "Hogwarts-Legacy-4.jpg"]
     },
     {
         "title": "The Witcher 3: Wild Hunt",
@@ -240,7 +261,8 @@
         "releaseDate": "2015-05-18",
         "developer": "CD PROJEKT RED",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-22"
+        "imageUrl": "game-22",
+        "gallery": ["The-Witcher-3-1.jpg", "The-Witcher-3-2.jpg", "The-Witcher-3-3.jpg", "The-Witcher-3-4.jpg"]
     },
     {
         "title": "Grand Theft Auto V",
@@ -251,7 +273,8 @@
         "releaseDate": "2013-09-17",
         "developer": "Rockstar North",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-23"
+        "imageUrl": "game-23",
+        "gallery": ["Grand-Theft-Auto-V-1.jpg", "Grand-Theft-Auto-V-2.jpg", "Grand-Theft-Auto-V-3.jpg", "Grand-Theft-Auto-V-4.jpg"]
     },
     {
         "title": "Bully: Scholarship Edition",
@@ -262,7 +285,8 @@
         "releaseDate": "2008-10-21",
         "developer": "Rockstar New England",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-24"
+        "imageUrl": "game-24",
+        "gallery": ["Bully-1.jpg", "Bully-2.jpg", "Bully-3.jpg", "Bully-4.jpg"]
     },
     {
         "title": "Dark Souls III",
@@ -273,7 +297,8 @@
         "releaseDate": "2016-04-11",
         "developer": "FromSoftware, Inc.",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-25"
+        "imageUrl": "game-25",
+        "gallery": ["Dark-Souls-III-1.jpg", "Dark-Souls-III-2.jpg", "Dark-Souls-III-3.jpg", "Dark-Souls-III-4.jpg"]
     },
     {
         "title": "Sekiro: Shadows Die Twice",
@@ -284,7 +309,8 @@
         "releaseDate": "2019-03-21",
         "developer": "FromSoftware, Inc.",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-26"
+        "imageUrl": "game-26",
+        "gallery": ["Sekiro-Shadows-Die-Twice-1.jpg", "Sekiro-Shadows-Die-Twice-2.jpg", "Sekiro-Shadows-Die-Twice-3.jpg", "Sekiro-Shadows-Die-Twice-4.jpg"]
     },
     {
         "title": "Elden Ring",
@@ -295,7 +321,8 @@
         "releaseDate": "2022-02-14",
         "developer": "FromSoftware, Inc.",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-27"
+        "imageUrl": "game-27",
+        "gallery": ["Elden-Ring-1.jpg", "Elden-Ring-2.jpg", "Elden-Ring-3.jpg", "Elden-Ring-4.jpg"]
     },
     {
         "title": "Hades",
@@ -306,7 +333,8 @@
         "releaseDate": "2020-09-17",
         "developer": "Supergiant Games",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-28"
+        "imageUrl": "game-28",
+        "gallery": ["Hades-1.jpg", "Hades-2.jpg", "Hades-3.jpg", "Hades-4.jpg"]
     },
     {
         "title": "Stardew Valley",
@@ -317,7 +345,8 @@
         "releaseDate": "2016-02-26",
         "developer": "ConcernedApe",
         "category": "6888cbf8c4303ac5b36a68ed",
-        "imageUrl": "game-29"
+        "imageUrl": "game-29",
+        "gallery": ["Stardew-Valley-1.jpg", "Stardew-Valley-2.jpg", "Stardew-Valley-3.jpg", "Stardew-Valley-4.jpg"]
     },
     {
         "title": "Terraria",
@@ -328,7 +357,8 @@
         "releaseDate": "2011-05-16",
         "developer": "Re-Logic",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-30"
+        "imageUrl": "game-30",
+        "gallery": ["Terraria-1.jpg", "Terraria-2.jpg", "Terraria-3.jpg", "Terraria-4.jpg"]
     },
     {
         "title": "Don't Starve Together",
@@ -339,7 +369,8 @@
         "releaseDate": "2016-04-21",
         "developer": "Klei Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-31"
+        "imageUrl": "game-31",
+        "gallery": ["Dont-Starve-Together-1.jpg", "Dont-Starve-Together-2.jpg", "Dont-Starve-Together-3.jpg", "Dont-Starve-Together-4.jpg"]
     },
     {
         "title": "Subnautica",
@@ -350,7 +381,8 @@
         "releaseDate": "2018-01-23",
         "developer": "Unknown Worlds Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-32"
+        "imageUrl": "game-32",
+        "gallery": ["Subnautica-1.jpg", "Subnautica-2.jpg", "Subnautica-3.jpg", "Subnautica-4.jpg"]
     },
     {
         "title": "No Man's Sky",
@@ -361,7 +393,8 @@
         "releaseDate": "2016-08-12",
         "developer": "Hello Games",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-33"
+        "imageUrl": "game-33",
+        "gallery": ["No-Mans-Sky-1.jpg", "No-Mans-Sky-2.jpg", "No-Mans-Sky-3.jpg", "No-Mans-Sky-4.jpg"]
     },
     {
         "title": "The Forest",
@@ -369,10 +402,11 @@
         "price": 28.89,
         "reviews": 4.7,
         "platform": "PC",
-        "releaseDate": "2028-04-30",
+        "releaseDate": "2018-04-30",
         "developer": "Endnight Games Ltd",
         "category": "6888d18dc4303ac5b36a68f1",
-        "imageUrl": "game-34"
+        "imageUrl": "game-34",
+        "gallery": ["The-Forest-1.jpg", "The-Forest-2.jpg", "The-Forest-3.jpg", "The-Forest-4.jpg"]
     },
     {
         "title": "Valheim",
@@ -383,7 +417,8 @@
         "releaseDate": "2021-02-02",
         "developer": "Iron Gate AB",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-35"
+        "imageUrl": "game-35",
+        "gallery": ["Valheim-1.jpg", "Valheim-2.jpg", "Valheim-3.jpg", "Valheim-4.jpg"]
     },
     {
         "title": "Phasmophobia",
@@ -394,6 +429,7 @@
         "releaseDate": "2020-09-18",
         "developer": "Kinetic Games",
         "category": "68883d77c4303ac5b36a68eb",
-        "imageUrl": "game-36"
+        "imageUrl": "game-36",
+        "gallery": ["Phasmophobia-1.jpg", "Phasmophobia-2.jpg", "Phasmophobia-3.jpg", "Phasmophobia-4.jpg"]
     }
 ]

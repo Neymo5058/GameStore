@@ -43,6 +43,10 @@ const GameSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    gallery: {
+      type: [String],
+      required: false,
+    },
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",

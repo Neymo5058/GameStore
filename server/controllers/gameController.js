@@ -50,10 +50,23 @@ const GameController = {
   },
   async getItems(req, res) {
     try {
-      const games = await GameModel.find().populate("category");
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 12;
+      const skip = (page - 1) * limit;
+
+      const [games, total] = await Promise.all([
+        GameModel.find().skip(skip).limit(limit).populate("category"),
+        GameModel.countDocuments(),
+      ]);
+
       res.status(200).json({
         status: "success",
-        data: { games },
+        data: {
+          games,
+          currentPage: page,
+          totalPages: Math.ceil(total / limit),
+          totalItems: total,
+        },
       });
     } catch (err) {
       res.status(500).json({ message: "Cannot get games." });

@@ -1,4 +1,5 @@
 <script setup>
+import GameGallery from "./GameGallery.vue";
 defineProps({
   game: {
     type: Object,
@@ -19,26 +20,7 @@ function formatDate(date) {
   <section class="game-section">
     <div class="main-container">
       <div class="gallery-container">
-        <div class="main-img-container">
-          <img src="/images/img-1.jpg" alt="" />
-        </div>
-        <div class="image-container">
-          <div class="gallery-img-container">
-            <img src="/images/img-1.jpg" alt="" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/images/img-1.jpg" alt="" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/images/img-1.jpg" alt="" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/images/img-1.jpg" alt="" />
-          </div>
-          <div class="gallery-img-container">
-            <img src="/images/img-1.jpg" alt="" />
-          </div>
-        </div>
+        <GameGallery :game="game" />
       </div>
 
       <div class="card">
@@ -96,9 +78,6 @@ function formatDate(date) {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-.image-container {
-  display: flex;
-}
 img {
   width: 100%;
   display: block;
