@@ -21,7 +21,7 @@
         "developer": "World's Edge, Relic Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-2",
-        "gallery": ["age-of-Empire-1.jpg", "age-of-Empire-2.jpg", "age-of-Empire-3.jpg", "age-of-Empire-4.jpg"]
+        "gallery": ["age-of-empire-1.jpg", "age-of-empire-2.jpg", "age-of-empire-3.jpg", "age-of-empire-4.jpg"]
     },
     {
         "title": "Diablo IV",
@@ -34,7 +34,7 @@
         "publisher": "Blizzard Entertainment, Inc.",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-3",
-        "gallery": ["Diablo-IV-1.jpg", "Diablo-IV-2.jpg", "Diablo-IV-3.jpg", "Diablo-IV-4.jpg"]
+        "gallery": ["diablo-4-1.jpg", "diablo-4-2.jpg", "diablo-4-3.jpg", "diablo-4-4.jpg"]
     },
     {
         "title": "EA SPORTS FC 25",
@@ -46,7 +46,7 @@
         "developer": "EA Canada, EA Romania",
         "category": "688b9eacf8cdd82d0e59bb37",
         "imageUrl": "game-4",
-        "gallery": ["EA-SPORTS-FC-25-1.jpg", "EA-SPORTS-FC-25-2.jpg", "EA-SPORTS-FC-25-3.jpg", "EA-SPORTS-FC-25-4.jpg"]
+        "gallery": ["ea-sports-fc-25-1.jpg", "ea-sports-fc-25-2.jpg", "ea-sports-fc-25-3.jpg", "ea-sports-fc-25-4.jpg"]
     },
     {
         "title": "NARAKA: BLADEPOINT",
@@ -58,7 +58,7 @@
         "developer": "24 Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-5",
-        "gallery": ["NARAKA-1.jpg", "NARAKA-2.jpg", "NARAKA-3.jpg", "NARAKA-4.jpg"]
+        "gallery": ["naraka-1.jpg", "naraka-2.jpg", "naraka-3.jpg", "naraka-4.jpg"]
     },
     {
         "title": "Borderlands 4",
@@ -70,7 +70,7 @@
         "developer": "Gearbox Software",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-6",
-        "gallery": ["Borderlands-1.jpg", "Borderlands-2.jpg", "Borderlands-3.jpg", "Borderlands-4.jpg"]
+        "gallery": ["borderlands-1.jpg", "borderlands-2.jpg", "borderlands-3.jpg", "borderlands-4.jpg"]
     },
     {
         "title": "NBA 2K25",
@@ -82,7 +82,7 @@
         "developer": "Visual Concepts",
         "category": "688b9eacf8cdd82d0e59bb37",
         "imageUrl": "game-7",
-        "gallery": ["NBA2K25-1.jpg", "NBA2K25-2.jpg", "NBA2K25-3.jpg", "NBA2K25-4.jpg"]
+        "gallery": ["nba2k25-1.jpg", "nba2k25-2.jpg", "nba2k25-3.jpg", "nba2k25-4.jpg"]
     },
     {
         "title": "Forza Horizon 5",
@@ -94,7 +94,7 @@
         "developer": "Playground Games",
         "category": "688a3bc554ffa38c0ed46296",
         "imageUrl": "game-8",
-        "gallery": ["Forza Horizon5-1.jpg", "Forza Horizon5-2.jpg", "Forza Horizon5-3.jpg", "Forza Horizon5-4.jpg"]
+        "gallery": ["forza-horizon5-1.jpg", "forza-horizon5-2.jpg", "forza-horizon5-3.jpg", "forza-horizon5-4.jpg"]
     },
     {
         "title": "Warhammer 40,000: Space Marine 2",
@@ -106,7 +106,7 @@
         "developer": "Saber Interactive",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-9",
-        "gallery": ["Space Marine II-1.jpg", "Space Marine II-2.jpg", "Space Marine II-3.jpg", "Space Marine II-4.jpg"]
+        "gallery": ["space-marine-1.jpg", "space-marine-2.jpg", "space-marine-3.jpg", "space-marine-4.jpg"]
     },
     {
         "title": "Cyberpunk 2077",
@@ -118,7 +118,7 @@
         "developer": "CD PROJEKT RED",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-10",
-        "gallery": ["Cyberpunk 2077-1.jpg", "Cyberpunk 2077-2.jpg", "Cyberpunk 2077-3.jpg", "Cyberpunk 2077-4.jpg"]
+        "gallery": ["cyberpunk-2077-1.jpg", "cyberpunk-2077-2.jpg", "cyberpunk-2077-3.jpg", "cyberpunk-2077-4.jpg"]
     },
     {
         "title": "Red Dead Redemption 2",
@@ -130,7 +130,7 @@
         "developer": "Rockstar Games",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-11",
-        "gallery": ["Red-Dead-Redemption-1.jpg", "Red-Dead-Redemption-2.jpg", "Red-Dead-Redemption-3.jpg", "Red-Dead-Redemption-4.jpg"]
+        "gallery": ["red-dead-redemption-1.jpg", "red-dead-redemption-2.jpg", "red-dead-redemption-3.jpg", "red-dead-redemption-4.jpg"]
     },
     {
         "title": "Mafia: The Old Country",
@@ -142,7 +142,7 @@
         "developer": "Hangar 13",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-12",
-        "gallery": ["Mafia-The-Old-Country-1.jpg", "Mafia-The-Old-Country-2.jpg", "Mafia-The-Old-Country-3.jpg", "Mafia-The-Old-Country-4.jpg"]
+        "gallery": ["mafia-the-old-country-1.jpg", "mafia-the-old-country-2.jpg", "mafia-the-old-country-3.jpg", "mafia-the-old-country-4.jpg"]
     },
     {
         "title": "Half-Life 2",
@@ -154,7 +154,7 @@
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
         "imageUrl": "game-13",
-        "gallery": ["Half-Life-1.jpg", "Half-Life-2.jpg", "Half-Life-3.jpg", "Half-Life-4.jpg"]
+        "gallery": ["half-life-1.jpg", "half-life-2.jpg", "half-life-3.jpg", "half-life-4.jpg"]
     },
     {
         "title": "Portal 2",
@@ -166,7 +166,7 @@
         "developer": "Valve",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-14",
-        "gallery": ["Portal-1.jpg", "Portal-2.jpg", "Portal-3.jpg", "Portal-4.jpg"]
+        "gallery": ["portal-1.jpg", "portal-2.jpg", "portal-3.jpg", "portal-4.jpg"]
     },
     {
         "title": "Left 4 Dead 2",
@@ -178,7 +178,7 @@
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
         "imageUrl": "game-15",
-        "gallery": ["Left-4-Dead-1.jpg", "Left-4-Dead-2.jpg", "Left-4-Dead-3.jpg", "Left-4-Dead-4.jpg"]
+        "gallery": ["left-4-dead-1.jpg", "left-4-dead-2.jpg", "left-4-dead-3.jpg", "left-4-dead-4.jpg"]
     },
     {
         "title": "Dota 2",
@@ -190,7 +190,7 @@
         "developer": "Valve",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-16",
-        "gallery": ["Dota-1.jpg", "Dota-2.jpg", "Dota-3.jpg", "Dota-4.jpg"]
+        "gallery": ["dota-1.jpg", "dota-2.jpg", "dota-3.jpg", "dota-4.jpg"]
     },
     {
         "title": "Counter-Strike: Global Offensive",
@@ -202,7 +202,7 @@
         "developer": "Valve",
         "category": "688b9e8ef8cdd82d0e59bb35",
         "imageUrl": "game-17",
-        "gallery": ["Counter-Strike-Global-Offensive-1.jpg", "Counter-Strike-Global-Offensive-2.jpg", "Counter-Strike-Global-Offensive-3.jpg", "Counter-Strike-Global-Offensive-4.jpg"]
+        "gallery": ["counter-strike-global-offensive-1.jpg", "counter-strike-global-offensive-2.jpg", "counter-strike-global-offensive-3.jpg", "counter-strike-global-offensive-4.jpg"]
     },
     {
         "title": "Team Fortress 2",
@@ -214,7 +214,7 @@
         "developer": "Valve",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-18",
-        "gallery": ["Team-Fortress-2-1.jpg", "Team-Fortress-2-2.jpg", "Team-Fortress-2-3.jpg", "Team-Fortress-2-4.jpg"]
+        "gallery": ["team-fortress-2-1.jpg", "team-fortress-2-2.jpg", "team-fortress-2-3.jpg", "team-fortress-2-4.jpg"]
     },
     {
         "title": "Rust",
@@ -226,7 +226,7 @@
         "developer": "Facepunch Studios",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-19",
-        "gallery": ["Rust-1.jpg", "Rust-2.jpg", "Rust-3.jpg", "Rust-4.jpg"]
+        "gallery": ["rust-1.jpg", "rust-2.jpg", "rust-3.jpg", "rust-4.jpg"]
     },
     {
         "title": "ARK: Survival Evolved",
@@ -238,7 +238,7 @@
         "developer": "Studio Wildcard",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-20",
-        "gallery": ["ARK-Survival-Evolved-1.jpg", "ARK-Survival-Evolved-2.jpg", "ARK-Survival-Evolved-3.jpg", "ARK-Survival-Evolved-4.jpg"]
+        "gallery": ["ark-survival-evolved-1.jpg", "ark-survival-evolved-2.jpg", "ark-survival-evolved-3.jpg", "ark-survival-evolved-4.jpg"]
     },
     {
         "title": "Hogwarts Legacy",
@@ -250,7 +250,7 @@
         "developer": "Avalanche Software",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-21",
-        "gallery": ["Hogwarts-Legacy-1.jpg", "Hogwarts-Legacy-2.jpg", "Hogwarts-Legacy-3.jpg", "Hogwarts-Legacy-4.jpg"]
+        "gallery": ["hogwarts-legacy-1.jpg", "hogwarts-legacy-2.jpg", "hogwarts-legacy-3.jpg", "hogwarts-legacy-4.jpg"]
     },
     {
         "title": "The Witcher 3: Wild Hunt",
@@ -262,7 +262,7 @@
         "developer": "CD PROJEKT RED",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-22",
-        "gallery": ["The-Witcher-3-1.jpg", "The-Witcher-3-2.jpg", "The-Witcher-3-3.jpg", "The-Witcher-3-4.jpg"]
+        "gallery": ["the-witcher-3-1.jpg", "the-witcher-3-2.jpg", "the-witcher-3-3.jpg", "the-witcher-3-4.jpg"]
     },
     {
         "title": "Grand Theft Auto V",
@@ -274,7 +274,7 @@
         "developer": "Rockstar North",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-23",
-        "gallery": ["Grand-Theft-Auto-V-1.jpg", "Grand-Theft-Auto-V-2.jpg", "Grand-Theft-Auto-V-3.jpg", "Grand-Theft-Auto-V-4.jpg"]
+        "gallery": ["grand-theft-auto-1.jpg", "grand-theft-auto-2.jpg", "grand-theft-auto-3.jpg", "grand-theft-auto-4.jpg"]
     },
     {
         "title": "Bully: Scholarship Edition",
@@ -286,7 +286,7 @@
         "developer": "Rockstar New England",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-24",
-        "gallery": ["Bully-1.jpg", "Bully-2.jpg", "Bully-3.jpg", "Bully-4.jpg"]
+        "gallery": ["bully-1.jpg", "bully-2.jpg", "bully-3.jpg", "bully-4.jpg"]
     },
     {
         "title": "Dark Souls III",
@@ -298,7 +298,7 @@
         "developer": "FromSoftware, Inc.",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-25",
-        "gallery": ["Dark-Souls-III-1.jpg", "Dark-Souls-III-2.jpg", "Dark-Souls-III-3.jpg", "Dark-Souls-III-4.jpg"]
+        "gallery": ["dark-souls-III-1.jpg", "dark-souls-III-2.jpg", "dark-souls-III-3.jpg", "dark-souls-III-4.jpg"]
     },
     {
         "title": "Sekiro: Shadows Die Twice",
@@ -310,7 +310,7 @@
         "developer": "FromSoftware, Inc.",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-26",
-        "gallery": ["Sekiro-Shadows-Die-Twice-1.jpg", "Sekiro-Shadows-Die-Twice-2.jpg", "Sekiro-Shadows-Die-Twice-3.jpg", "Sekiro-Shadows-Die-Twice-4.jpg"]
+        "gallery": ["sekiro-shadows-die-twice-1.jpg", "sekiro-shadows-die-twice-2.jpg", "sekiro-shadows-die-twice-3.jpg", "sekiro-shadows-die-twice-4.jpg"]
     },
     {
         "title": "Elden Ring",
@@ -322,7 +322,7 @@
         "developer": "FromSoftware, Inc.",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-27",
-        "gallery": ["Elden-Ring-1.jpg", "Elden-Ring-2.jpg", "Elden-Ring-3.jpg", "Elden-Ring-4.jpg"]
+        "gallery": ["elden-ring-1.jpg", "elden-ring-2.jpg", "elden-ring-3.jpg", "elden-ring-4.jpg"]
     },
     {
         "title": "Hades",
@@ -334,7 +334,7 @@
         "developer": "Supergiant Games",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-28",
-        "gallery": ["Hades-1.jpg", "Hades-2.jpg", "Hades-3.jpg", "Hades-4.jpg"]
+        "gallery": ["hades-1.jpg", "hades-2.jpg", "hades-3.jpg", "hades-4.jpg"]
     },
     {
         "title": "Stardew Valley",
@@ -346,7 +346,7 @@
         "developer": "ConcernedApe",
         "category": "6888cbf8c4303ac5b36a68ed",
         "imageUrl": "game-29",
-        "gallery": ["Stardew-Valley-1.jpg", "Stardew-Valley-2.jpg", "Stardew-Valley-3.jpg", "Stardew-Valley-4.jpg"]
+        "gallery": ["stardew-valley-1.jpg", "stardew-valley-2.jpg", "stardew-valley-3.jpg", "stardew-valley-4.jpg"]
     },
     {
         "title": "Terraria",
@@ -358,7 +358,7 @@
         "developer": "Re-Logic",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-30",
-        "gallery": ["Terraria-1.jpg", "Terraria-2.jpg", "Terraria-3.jpg", "Terraria-4.jpg"]
+        "gallery": ["terraria-1.jpg", "terraria-2.jpg", "terraria-3.jpg", "terraria-4.jpg"]
     },
     {
         "title": "Don't Starve Together",
@@ -370,7 +370,7 @@
         "developer": "Klei Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-31",
-        "gallery": ["Dont-Starve-Together-1.jpg", "Dont-Starve-Together-2.jpg", "Dont-Starve-Together-3.jpg", "Dont-Starve-Together-4.jpg"]
+        "gallery": ["dont-starve-together-1.jpg", "dont-starve-together-2.jpg", "dont-starve-together-3.jpg", "dont-starve-together-4.jpg"]
     },
     {
         "title": "Subnautica",
@@ -382,7 +382,7 @@
         "developer": "Unknown Worlds Entertainment",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-32",
-        "gallery": ["Subnautica-1.jpg", "Subnautica-2.jpg", "Subnautica-3.jpg", "Subnautica-4.jpg"]
+        "gallery": ["subnautica-1.jpg", "subnautica-2.jpg", "subnautica-3.jpg", "subnautica-4.jpg"]
     },
     {
         "title": "No Man's Sky",
@@ -394,7 +394,7 @@
         "developer": "Hello Games",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-33",
-        "gallery": ["No-Mans-Sky-1.jpg", "No-Mans-Sky-2.jpg", "No-Mans-Sky-3.jpg", "No-Mans-Sky-4.jpg"]
+        "gallery": ["no-mans-sky-1.jpg", "no-mans-sky-2.jpg", "no-mans-sky-3.jpg", "no-mans-sky-4.jpg"]
     },
     {
         "title": "The Forest",
@@ -406,7 +406,7 @@
         "developer": "Endnight Games Ltd",
         "category": "6888d18dc4303ac5b36a68f1",
         "imageUrl": "game-34",
-        "gallery": ["The-Forest-1.jpg", "The-Forest-2.jpg", "The-Forest-3.jpg", "The-Forest-4.jpg"]
+        "gallery": ["the-forest-1.jpg", "the-forest-2.jpg", "the-forest-3.jpg", "the-forest-4.jpg"]
     },
     {
         "title": "Valheim",
@@ -418,7 +418,7 @@
         "developer": "Iron Gate AB",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-35",
-        "gallery": ["Valheim-1.jpg", "Valheim-2.jpg", "Valheim-3.jpg", "Valheim-4.jpg"]
+        "gallery": ["valheim-1.jpg", "valheim-2.jpg", "valheim-3.jpg", "valheim-4.jpg"]
     },
     {
         "title": "Phasmophobia",
@@ -430,6 +430,6 @@
         "developer": "Kinetic Games",
         "category": "68883d77c4303ac5b36a68eb",
         "imageUrl": "game-36",
-        "gallery": ["Phasmophobia-1.jpg", "Phasmophobia-2.jpg", "Phasmophobia-3.jpg", "Phasmophobia-4.jpg"]
+        "gallery": ["phasmophobia-1.jpg", "phasmophobia-2.jpg", "phasmophobia-3.jpg", "phasmophobia-4.jpg"]
     }
 ]
