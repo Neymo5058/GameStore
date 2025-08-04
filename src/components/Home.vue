@@ -3,6 +3,7 @@ import { onMounted } from "vue";
 import { useGameStore } from "@/stores/games";
 import GameItem from "../components/GameItem.vue";
 import Pagination from "../components/Pagination.vue";
+import Spinner from "../components/Spinner.vue";
 
 const gameStore = useGameStore();
 
@@ -13,6 +14,9 @@ onMounted(() => {
 
 <template>
   <section class="store-home">
+    <div v-if="gameStore.isLoading" class="spinner-wrapper">
+      <Spinner />
+    </div>
     <section class="game-container">
       <GameItem v-for="game in gameStore.games" :key="game._id" :game="game" />
     </section>
@@ -42,5 +46,11 @@ onMounted(() => {
 .pagination-container {
   display: flex;
   justify-content: center;
+}
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
 }
 </style>
