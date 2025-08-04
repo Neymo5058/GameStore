@@ -41,7 +41,6 @@ const selectedImage = ref(gallery[0]);
 .main-image {
   width: 100%;
   max-height: 400px;
-  object-fit: contain;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,6 +48,7 @@ const selectedImage = ref(gallery[0]);
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
+  justify-content: center;
 }
 
 .thumbnail-image {
