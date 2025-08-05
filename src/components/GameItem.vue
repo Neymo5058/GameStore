@@ -5,13 +5,17 @@ const { game } = defineProps({
     required: true,
   },
 });
+console.log("test");
+
+const router = useRouter();
+function showGameDetails() {
+  router.push(`/games/${game._id}`);
+  console.log(game);
+}
 </script>
 
 <template>
-  <router-link
-    class="game-items"
-    :to="`/games/${game._id || game.id}`"
-  >
+  <router-link class="game-items" :to="`/games/${game._id || game.id}`">
     <img
       class="game-img"
       :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
