@@ -2,7 +2,7 @@
 import GameGallery from "./GameGallery.vue";
 import { useCartStore } from "@/stores/cart";
 
-defineProps({
+const { game } = defineProps({
   game: {
     type: Object,
     required: true,

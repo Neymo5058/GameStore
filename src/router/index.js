@@ -10,6 +10,8 @@ import AddProduct from "../views/Manager/AddProduct.vue";
 import ManagerUsers from "../views/Manager/ManagerUsers.vue";
 import { useAuthStore } from "../stores/authStore";
 
+let authInitialized = false;
+
 const routes = [
   { path: "/", name: "Home", component: HomePage },
   { path: "/signup", name: "SignUp", component: SignUpPage },
@@ -38,7 +40,11 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   const auth = useAuthStore();
-  await auth.restore();
+
+  if (!authInitialized && auth.user === null && !auth.isLoading) {
+    authInitialized = true;
+    await auth.restore();
+  }
 
   const userRole = auth.user?.role || auth.role;
 

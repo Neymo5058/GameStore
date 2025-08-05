@@ -157,8 +157,6 @@ const GameController = {
     try {
       const page = parseInt(req.query.page) || 1;
       const limit = parseInt(req.query.limit) || 12;
-      const page = parseInt(req.query.page) || 1;
-      const limit = parseInt(req.query.limit) || 12;
       const skip = (page - 1) * limit;
 
       const [games, totalItems] = await Promise.all([
