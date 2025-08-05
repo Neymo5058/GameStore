@@ -1,4 +1,4 @@
-import GameModel from "../models/GameModel.js";
+import GameModel from "@/models/GameModel.js";
 
 const GameController = {
   async create(req, res) {
