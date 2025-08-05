@@ -6,12 +6,13 @@
 </template>
 
 <script setup>
-import Header from './components/Header.vue'
+import Header from "./components/Header.vue";
 </script>
 
 <style>
 /* Full reset */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #243248;

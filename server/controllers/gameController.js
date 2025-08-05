@@ -27,9 +27,7 @@ const GameController = {
       const formattedCategory = await formatCategory(category);
       const img = imageUrl || image;
       if (!formattedCategory.length || !img) {
-        return res
-          .status(400)
-          .json({ message: "Category ID(s) and imageUrl are required." });
+        return res.status(400).json({ message: "Category ID(s) and imageUrl are required." });
       }
       const newGame = await GameModel.create({
         ...rest,
@@ -119,7 +117,6 @@ const GameController = {
         return res.status(404).json({ message: "Game not found" });
       }
       res.status(200).json({ message: "Game deleted" });
-
     } catch (err) {
       next(err);
     }
