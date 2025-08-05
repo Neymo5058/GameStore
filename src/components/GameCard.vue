@@ -1,19 +1,8 @@
 <script setup>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import GameGallery from "./GameGallery.vue";
-defineProps({
-=======
-=======
->>>>>>> Stashed changes
 import { useCartStore } from "@/stores/cart";
 
 // Access the passed game prop
 const props = defineProps({
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   game: {
     type: Object,
     required: true,
@@ -41,13 +30,6 @@ function formatDate(date) {
 <template>
   <section class="game-section">
     <div class="main-container">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <div class="gallery-container">
-        <GameGallery :game="game" />
-=======
-=======
->>>>>>> Stashed changes
       <div
         v-if="game.gallery && game.gallery.length"
         class="gallery-container"
@@ -64,7 +46,6 @@ function formatDate(date) {
             <img :src="`/galleries/${img}`" alt="" />
           </div>
         </div>
->>>>>>> Stashed changes
       </div>
 
       <div class="card">
@@ -137,6 +118,9 @@ function formatDate(date) {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
+.image-container {
+  display: flex;
+}
 img {
   width: 100%;
   display: block;

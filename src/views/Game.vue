@@ -1,14 +1,6 @@
 <script setup>
 import GameCard from "@/components/GameCard.vue";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import Spinner from "@/components/Spinner.vue";
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 import axios from "axios";
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
@@ -32,16 +24,9 @@ onMounted(async () => {
 </script>
 <template>
   <div class="game-container">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <Spinner v-if="isLoading" />
-=======
     <LoadingSpinner v-if="isLoading" />
->>>>>>> Stashed changes
-=======
-    <LoadingSpinner v-if="isLoading" />
->>>>>>> Stashed changes
     <p v-else-if="error" class="error">{{ error }}</p>
     <GameCard v-else :game="game" />
   </div>
 </template>
+<style></style>
