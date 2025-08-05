@@ -3,8 +3,12 @@ import { onMounted } from "vue";
 import { useGameStore } from "@/stores/games";
 import GameItem from "../components/GameItem.vue";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Pagination from "../components/Pagination.vue";
 import Spinner from "../components/Spinner.vue";
+=======
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+>>>>>>> Stashed changes
 =======
 import LoadingSpinner from "../components/LoadingSpinner.vue";
 >>>>>>> Stashed changes
@@ -43,6 +47,9 @@ onMounted(() => {
         :game="game"
       />
     </template>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </section>
 </template>
@@ -60,6 +67,7 @@ onMounted(() => {
   grid-template-columns: repeat(3, 1fr);
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .pagination-container {
   display: flex;
   justify-content: center;
@@ -70,6 +78,8 @@ onMounted(() => {
   align-items: center;
   padding: 4rem;
 =======
+=======
+>>>>>>> Stashed changes
 .pagination {
   display: flex;
   justify-content: center;
@@ -90,6 +100,9 @@ onMounted(() => {
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 </style>

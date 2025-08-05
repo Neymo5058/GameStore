@@ -1,6 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import GameModel from "@/models/GameModel.js";
 =======
+=======
+>>>>>>> Stashed changes
 import GameModel from "../models/gameModel.js";
 import CategoryModel from "../models/categoryModel.js";
 import mongoose from "mongoose";
@@ -22,6 +25,9 @@ async function formatCategory(category) {
   }
   return ids;
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 const GameController = {
@@ -163,6 +169,7 @@ const GameController = {
   async getItems(req, res, next) {
     try {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       const page = parseInt(req.query.page) || 1;
       const limit = parseInt(req.query.limit) || 12;
       const skip = (page - 1) * limit;
@@ -170,12 +177,17 @@ const GameController = {
       const [games, total] = await Promise.all([
         GameModel.find().skip(skip).limit(limit).populate("category"),
 =======
+=======
+>>>>>>> Stashed changes
       const page = parseInt(req.query.page, 10) || 1;
       const limit = parseInt(req.query.limit, 10) || 10;
       const skip = (page - 1) * limit;
 
       const [games, totalItems] = await Promise.all([
         GameModel.find().populate("category").skip(skip).limit(limit),
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         GameModel.countDocuments(),
       ]);
@@ -195,6 +207,9 @@ const GameController = {
           totalPages: Math.ceil(totalItems / limit),
           page,
           limit,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         },
       });

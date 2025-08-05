@@ -11,23 +11,33 @@ export const useGameStore = defineStore("games", {
 =======
     games: [],
     pagination: { page: 1, limit: 10, totalPages: 0, totalItems: 0 },
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     isLoading: false,
   }),
   actions: {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     async fetchGames(page = 1) {
+=======
+    async fetchGames(page = 1, limit = 10) {
+>>>>>>> Stashed changes
 =======
     async fetchGames(page = 1, limit = 10) {
 >>>>>>> Stashed changes
       this.isLoading = true;
       try {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         const response = await axios.get(`/api/games?page=${page}&limit=12`);
         this.games = response.data.data.games;
         this.currentPage = response.data.data.currentPage;
         this.totalPages = response.data.data.totalPages;
 =======
+=======
+>>>>>>> Stashed changes
         const response = await axios.get("/api/games", {
           params: { page, limit },
         });
@@ -45,6 +55,9 @@ export const useGameStore = defineStore("games", {
             totalItems: this.games.length,
           };
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       } catch (err) {
         console.error("Erreur fetch games:", err);

@@ -1,7 +1,11 @@
 <script setup>
 import GameCard from "@/components/GameCard.vue";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Spinner from "@/components/Spinner.vue";
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -29,7 +33,11 @@ onMounted(async () => {
 <template>
   <div class="game-container">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <Spinner v-if="isLoading" />
+=======
+    <LoadingSpinner v-if="isLoading" />
+>>>>>>> Stashed changes
 =======
     <LoadingSpinner v-if="isLoading" />
 >>>>>>> Stashed changes
