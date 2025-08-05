@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__section">
       <div class="footer__content">
         <h3 class="footer__title">About</h3>

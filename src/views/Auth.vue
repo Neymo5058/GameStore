@@ -1,39 +1,39 @@
 <template>
   <div class="auth-page">
-    <NavBar />
+    <Header />
 
     <main class="auth-main">
       <div class="auth-container">
-        <h1>Sign in</h1>
+        <h1>{{ $t('sign_in') }}</h1>
 
         <div class="auth-card">
-          <label class="field-label">Sign In With Email</label>
+          <label class="field-label">{{ $t('sign_in_with_email') }}</label>
           <input
             v-model="email"
             type="email"
-            placeholder="you@example.com"
+            :placeholder="$t('email_placeholder')"
           />
 
-          <label class="field-label uppercase">PASSWORD</label>
+          <label class="field-label uppercase">{{ $t('password') }}</label>
           <input
             v-model="password"
             type="password"
-            placeholder="••••••••"
+            :placeholder="$t('password_placeholder')"
           />
 
-          <button class="btn-primary" @click="submit">Sign in</button>
+          <button class="btn-primary" @click="submit">{{ $t('sign_in') }}</button>
 
           <!-- Connected user info box -->
           <div v-if="isLogged" class="connected-box">
-            Connected as: <b>{{ auth.user.email }}</b>
+            {{ $t('connected_as') }} <b>{{ auth.user.email }}</b>
             <span class="role-label">({{ auth.role }})</span>
           </div>
         </div>
 
         <div class="signup-prompt">
-          <span>New at GameStore ?</span>
+          <span>{{ $t('new_to_gamestore') }}</span>
           <router-link to="/auth/register" class="btn-secondary">
-            Sign UP
+            {{ $t('sign_up') }}
           </router-link>
         </div>
       </div>
@@ -49,6 +49,7 @@ import { useRouter } from 'vue-router';
 import { useAuthStore } from '../store/authStore';
 import NavBar from '../components/NavBar.vue';
 import Footer from '../components/Footer.vue';
+import Header from '../components/Header.vue';
 
 const email = ref('');
 const password = ref('');

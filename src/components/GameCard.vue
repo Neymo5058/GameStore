@@ -1,11 +1,22 @@
 <script setup>
-import GameGallery from "./GameGallery.vue";
-defineProps({
+import { useCartStore } from "@/stores/cart";
+
+// Access the passed game prop
+const props = defineProps({
   game: {
     type: Object,
     required: true,
   },
 });
+
+// Cart store instance
+const cart = useCartStore();
+
+// Add the current game to the cart
+function addToCart() {
+  cart.add(props.game);
+}
+
 function formatDate(date) {
   if (!date) return "";
   return new Date(date).toLocaleDateString("en-US", {
@@ -19,12 +30,30 @@ function formatDate(date) {
 <template>
   <section class="game-section">
     <div class="main-container">
-      <div class="gallery-container">
-        <GameGallery :game="game" />
+      <div
+        v-if="game.gallery && game.gallery.length"
+        class="gallery-container"
+      >
+        <div class="main-img-container">
+          <img :src="`/galleries/${game.gallery[0]}`" alt="" />
+        </div>
+        <div class="image-container">
+          <div
+            v-for="(img, index) in game.gallery"
+            :key="index"
+            class="gallery-img-container"
+          >
+            <img :src="`/galleries/${img}`" alt="" />
+          </div>
+        </div>
       </div>
 
       <div class="card">
-        <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
+        <img
+          class="game-img"
+          :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
+          :alt="game.title"
+        />
         <div class="infos-container">
           <h2 class="game-header">{{ game.title }}</h2>
           <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>
@@ -36,6 +65,7 @@ function formatDate(date) {
           </p>
           <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
           <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
+          <button class="add-btn" @click="addToCart()">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -61,6 +91,16 @@ function formatDate(date) {
 .game-infos {
   color: #f8f9fa;
   line-height: 1.5;
+}
+
+.add-btn {
+  margin-top: 0.5rem;
+  background: #343a40;
+  color: #f8f9fa;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .main-container {

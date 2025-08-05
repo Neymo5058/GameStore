@@ -21,6 +21,11 @@ const GameSchema = new mongoose.Schema(
       type: Number,
       required: false,
     },
+    gallery: {
+      type: [String],
+      required: false,
+      default: [],
+    },
     platform: {
       type: String,
       enum: ["PC", "PS5", "Xbox", "Switch"],
@@ -35,13 +40,18 @@ const GameSchema = new mongoose.Schema(
       required: false,
     },
     category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
+      type: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Category",
+        },
+      ],
       required: [true, "A game must have a category"],
     },
     imageUrl: {
       type: String,
-      required: true,
+      required: false,
+      default: "https://example.com/placeholder.jpg",
     },
     gallery: {
       type: [String],
