@@ -1,16 +1,19 @@
+<!-- src/views/Home.vue -->
 <template>
   <div class="home">
-    <NavBar />
     <main class="content">
       <div class="games-grid">
         <router-link
           v-for="game in pagedGames"
-          :key="game.id"
-          :to="`/game/${game.id}`"
+          :key="game._id || game.id"
+          :to="`/games/${game._id || game.id}`"
           class="game-card-link"
         >
           <div class="game-card">
-            <img :src="game.image" class="game-img" />
+            <img
+              :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
+              class="game-img"
+            />
             <div class="price-bar">
               <span class="price-info">
                 <span class="title">{{ game.title }}</span>
@@ -22,12 +25,9 @@
       </div>
       <div class="pagination">
         <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button
-          v-for="n in totalPages"
-          :key="n"
-          @click="page = n"
-          :class="{ active: page === n }"
-        >{{ n }}</button>
+        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
+          {{ n }}
+        </button>
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
@@ -36,29 +36,30 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
-import { useGameStore } from '../store/gamestore'
+import { ref, computed, onMounted } from "vue";
+import Footer from "../components/Footer.vue";
+import { useGameStore } from "../stores/games";
 
-const gameStore = useGameStore()
+const gameStore = useGameStore();
 
 onMounted(() => {
-  gameStore.fetchAll()
-})
+  gameStore.fetchGames();
+});
 
-const page = ref(1)
-const pageSize = 12
+const page = ref(1);
+const pageSize = 12;
 
-const totalPages = computed(() =>
-  Math.ceil(gameStore.list.length / pageSize)
-)
+const totalPages = computed(() => Math.ceil(gameStore.games.length / pageSize));
 const pagedGames = computed(() =>
-  gameStore.list.slice((page.value - 1) * pageSize, page.value * pageSize)
-)
+  gameStore.games.slice((page.value - 1) * pageSize, page.value * pageSize)
+);
 
-function prevPage() { if (page.value > 1) page.value-- }
-function nextPage() { if (page.value < totalPages.value) page.value++ }
+function prevPage() {
+  if (page.value > 1) page.value--;
+}
+function nextPage() {
+  if (page.value < totalPages.value) page.value++;
+}
 </script>
 
 <style scoped>
@@ -67,22 +68,6 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   min-height: 100vh;
 }
 
-/* Manager toolbar */
-.manager-toolbar {
-  display: flex;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 1.5rem auto 0;
-}
-.toolbar-button {
-  background: #535bc9;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-/* grid of cards */
 .content {
   max-width: 1200px;
   margin: 2rem auto;
@@ -107,7 +92,7 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   border-radius: 12px;
   overflow: hidden;
   background: #34495e;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   text-decoration: none;
   color: inherit;
   transition: transform 0.13s;
@@ -156,26 +141,6 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   font-size: 1.15em;
 }
 
-/* manager-specific icons */
-.card-actions {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-}
-.card-actions button {
-  background: rgba(0,0,0,0.5);
-  border: none;
-  padding: 0.25rem;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-}
-.card-actions button:hover {
-  background: rgba(0,0,0,0.7);
-}
-
 /* pagination */
 .pagination {
   display: flex;
@@ -184,7 +149,8 @@ function nextPage() { if (page.value < totalPages.value) page.value++ }
   margin: 2rem 0;
 }
 .pagination button {
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   border: none;
   background: #34495e;
   color: #fff;

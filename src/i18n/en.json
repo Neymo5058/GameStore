@@ -1,0 +1,17 @@
+{
+  "sign_in": "Sign in",
+  "sign_in_with_email": "Sign In With Email",
+  "email": "Email",
+  "email_placeholder": "you@example.com",
+  "password": "Password",
+  "password_placeholder": "••••••••",
+  "new_to_gamestore": "New at GameStore ?",
+  "sign_up": "Sign Up",
+  "connected_as": "Connected as:",
+  "sign_up_with_email": "Sign up With Email",
+  "confirm_password": "Confirm Password",
+  "passwords_do_not_match": "Passwords do not match.",
+  "registration_failed": "Registration failed",
+  "signing_in": "Signing in...",
+  "invalid_credentials_or_server_error": "Invalid credentials or server error."
+}

@@ -1,40 +1,94 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from "vue"
+import { useRouter } from "vue-router"
+import { useI18n } from "vue-i18n"
+// If you have an authStore, import and use it here
+// import { useAuthStore } from '../store/authStore'
+import axios from "axios"
+
+const email = ref("")
+const password = ref("")
+const confirmPassword = ref("")
+const error = ref("")
+const router = useRouter()
+const { t } = useI18n()
+
+async function handleSignup(e) {
+  e.preventDefault()
+  error.value = ""
+
+  if (password.value !== confirmPassword.value) {
+    error.value = t("passwords_do_not_match")
+    return
+  }
+  try {
+    // Adjust URL if your API is different
+    await axios.post("/api/auth/register", {
+      email: email.value,
+      password: password.value
+    })
+    // Optionally auto-login and/or redirect
+    router.push("/login")
+  } catch (err) {
+    error.value = err?.response?.data?.message || t("registration_failed")
+  }
+}
 </script>
+
 
 <template>
   <section class="signup-section">
-    <form>
+    <form @submit="handleSignup">
       <div>
-        <h2 class="login-title">Sign up</h2>
+        <h2 class="login-title">{{ $t('sign_up') }}</h2>
       </div>
       <div class="form-label">
-        <label class="email-title"> Sign up With Email </label>
-        <input type="email" id="email" name="email" placeholder="Email" required />
-      </div>
-
-      <div class="form-label">
-        <label for="password" class="password-title">password </label>
-        <input type="password" id="password" name="password" placeholder="Password" required />
-      </div>
-
-      <div class="form-label">
-        <label for="confirm-password" class="password-title"> password </label>
+        <label class="email-title">{{ $t('sign_up_with_email') }}</label>
         <input
-          type="password"
-          id="confirm-password"
-          name="confirm-password"
-          placeholder="Confirm Password"
+          v-model="email"
+          type="email"
+          id="email"
+          name="email"
+          :placeholder="$t('email')"
           required
         />
       </div>
 
+      <div class="form-label">
+        <label for="password" class="password-title">{{ $t('password') }}</label>
+        <input
+          v-model="password"
+          type="password"
+          id="password"
+          name="password"
+          :placeholder="$t('password')"
+          required
+          autocomplete="new-password"
+        />
+      </div>
+
+      <div class="form-label">
+        <label for="confirm-password" class="password-title">{{ $t('confirm_password') }}</label>
+        <input
+          v-model="confirmPassword"
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          :placeholder="$t('confirm_password')"
+          required
+          autocomplete="new-password"
+        />
+      </div>
+
+      <div v-if="error" style="color:#ff5555;font-size:1rem;margin-bottom:1rem;">{{ error }}</div>
+
       <div class="btn-signup">
-        <button type="submit">Sign Up</button>
+        <button type="submit">{{ $t('sign_up') }}</button>
       </div>
     </form>
   </section>
 </template>
+
 
 <style scoped>
 .signup-section {
