@@ -6,6 +6,7 @@ const { game } = defineProps({
     required: true,
   },
 });
+console.log("test");
 
 const router = useRouter();
 function showGameDetails() {
