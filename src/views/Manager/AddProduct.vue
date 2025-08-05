@@ -1,15 +1,18 @@
 <template>
   <div class="add-product-page">
-    <NavBar />
+    <header />
 
     <div class="toolbar">
       <router-link to="/admin" class="toolbar-btn">Manage Users</router-link>
-      <router-link to="/manager/adduser" class="toolbar-btn">Add User</router-link>
-      <router-link to="/manager/add" class="toolbar-btn" :class="{active: !isEditMode}">Add product</router-link>
+
+      <router-link to="/manager/add" class="toolbar-btn" :class="{ active: !isEditMode }"
+        >Add product</router-link
+      >
     </div>
 
     <main class="main-content">
-      <div class="form-card">
+      <LoadingSpinner v-if="gameStore.isLoading" />
+      <div v-else class="form-card">
         <h3 class="form-title">{{ isEditMode ? "Edit Product" : "Add Product" }}</h3>
         <form @submit.prevent="saveProduct">
           <label class="form-label">Title</label>
@@ -32,15 +35,27 @@
             <option v-for="cat in categoryOptions" :key="cat" :value="cat">{{ cat }}</option>
           </select>
           <div class="category-tags">
-            <span
-              v-for="cat in category"
-              :key="cat"
-              class="category-tag"
-            >{{ cat }}</span>
+            <span v-for="cat in category" :key="cat" class="category-tag">{{ cat }}</span>
           </div>
 
           <label class="form-label">Price</label>
           <input v-model.number="price" type="number" min="0" class="form-input" required />
+
+          <label class="form-label">Reviews</label>
+          <input
+            v-model.number="reviews"
+            type="number"
+            min="0"
+            max="5"
+            step="0.1"
+            class="form-input"
+          />
+
+          <label class="form-label">Image URL</label>
+          <input v-model="imageUrl" class="form-input" required />
+
+          <label class="form-label">Gallery URLs (comma separated)</label>
+          <textarea v-model="galleryInput" class="form-input"></textarea>
 
           <button class="add-btn" type="submit">{{ isEditMode ? "Save" : "Add" }}</button>
         </form>
@@ -56,97 +71,130 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import NavBar from '../../components/NavBar.vue'
-import Footer from '../../components/Footer.vue'
-import { useGameStore } from '../../store/gamestore'
+import { ref, onMounted, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
+import { useGameStore } from "../../stores/games";
+import Footer from "../../components/Footer.vue";
 
-const route = useRoute()
-const gameStore = useGameStore()
+const route = useRoute();
+const gameStore = useGameStore();
 
-const id = computed(() => route.params.id)
-const isEditMode = computed(() => !!id.value)
+const id = computed(() => route.params.id);
+const isEditMode = computed(() => !!id.value);
 
-const title = ref('')
-const description = ref('')
-const platform = ref('PC')
-const releaseDate = ref('')
-const developer = ref('')
-const category = ref([])
-const price = ref(0)
-const success = ref(false)
+const title = ref("");
+const description = ref("");
+const platform = ref("PC");
+const releaseDate = ref("");
+const developer = ref("");
+const category = ref([]);
+const price = ref(0);
+const reviews = ref(0);
+const imageUrl = ref("");
+const galleryInput = ref("");
+const success = ref(false);
 
 // Suggested category options
 const categoryOptions = [
-  'Action', 'Adventure', 'RPG', 'Shooter', 'Simulation',
-  'Strategy', 'Sports', 'Racing', 'Indie', 'Puzzle'
-]
+  "Action",
+  "Adventure",
+  "RPG",
+  "Shooter",
+  "Simulation",
+  "Strategy",
+  "Sports",
+  "Racing",
+  "Indie",
+  "Puzzle",
+];
 
-onMounted(() => {
+onMounted(async () => {
+  if (!gameStore.games.length) {
+    await gameStore.fetchGames();
+  }
   if (isEditMode.value) {
     // Find the product by id
-    const product = gameStore.list.find(g => g.id === id.value)
+    const product = gameStore.getGameById(id.value);
     if (product) {
-      title.value = product.title
-      description.value = product.description
-      platform.value = product.platform
-      releaseDate.value = product.releaseDate
-      developer.value = product.developer
-      // For backward compatibility: support string or array
+      title.value = product.title;
+      description.value = product.description;
+      platform.value = product.platform;
+      releaseDate.value = product.releaseDate;
+      developer.value = product.developer;
+      // For backward compatibility: support string, array, or object
       category.value = Array.isArray(product.category)
-        ? [...product.category]
+        ? product.category.map((cat) => (typeof cat === "string" ? cat : cat.name || cat._id))
         : product.category
-        ? [product.category]
-        : []
-      price.value = product.price
+        ? [
+            typeof product.category === "string"
+              ? product.category
+              : product.category.name || product.category._id,
+          ]
+        : [];
+      price.value = product.price;
+      reviews.value = product.reviews || 0;
+      imageUrl.value = product.imageUrl || "";
+      galleryInput.value = product.gallery ? product.gallery.join(", ") : "";
     }
   } else {
     // On "add", set platform to PC by default and category empty
-    platform.value = "PC"
-    category.value = []
+    platform.value = "PC";
+    category.value = [];
+    reviews.value = 0;
+    imageUrl.value = "";
+    galleryInput.value = "";
   }
-})
+});
 
-function saveProduct() {
+async function saveProduct() {
+  const formattedCategories = category.value.map((cat) =>
+    typeof cat === "string" ? cat : cat.name || cat._id
+  );
+  const gallery = galleryInput.value
+    .split(",")
+    .map((g) => g.trim())
+    .filter((g) => g);
   if (isEditMode.value) {
     // Edit existing product
-    const index = gameStore.list.findIndex(g => g.id === id.value)
-    if (index !== -1) {
-      gameStore.list[index] = {
-        ...gameStore.list[index],
-        title: title.value,
-        description: description.value,
-        platform: platform.value,
-        releaseDate: releaseDate.value,
-        developer: developer.value,
-        category: category.value,
-        price: price.value
-      }
-      gameStore.save()
-    }
-    success.value = true
-  } else {
-    // Add new product
-    gameStore.addGame({
+    await gameStore.updateGame(id.value, {
       title: title.value,
       description: description.value,
       platform: platform.value,
       releaseDate: releaseDate.value,
       developer: developer.value,
-      category: category.value,
+      category: formattedCategories,
       price: price.value,
-      image: '/images/default.jpg'
-    })
-    success.value = true
-    title.value = ''
-    description.value = ''
-    platform.value = 'PC'
-    releaseDate.value = ''
-    developer.value = ''
-    category.value = []
-    price.value = 0
+      reviews: reviews.value,
+      imageUrl: imageUrl.value,
+      gallery,
+    });
+    success.value = true;
+  } else {
+    // Add new product
+    await gameStore.addGame({
+      title: title.value,
+      description: description.value,
+      platform: platform.value,
+      releaseDate: releaseDate.value,
+      developer: developer.value,
+      category: formattedCategories,
+      price: price.value,
+      reviews: reviews.value,
+      imageUrl: imageUrl.value,
+      gallery,
+    });
+    success.value = true;
+    title.value = "";
+    description.value = "";
+    platform.value = "PC";
+    releaseDate.value = "";
+    developer.value = "";
+    category.value = [];
+    price.value = 0;
+    reviews.value = 0;
+    imageUrl.value = "";
+    galleryInput.value = "";
   }
 }
 </script>
@@ -191,7 +239,7 @@ function saveProduct() {
 .form-card {
   background: #181c22;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   padding: 2.3rem 2.4rem 2.2rem 2.4rem;
   min-width: 430px;
   max-width: 650px;
@@ -226,9 +274,10 @@ form {
   font-size: 1rem;
   font-family: inherit;
   outline: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08) inset;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) inset;
   margin-bottom: 0.1rem;
   transition: background 0.13s;
+  background: linear-gradient(to right, #36393f, #2c2f33);
 }
 .form-input:focus {
   background: #344569;
@@ -245,12 +294,12 @@ form {
   font-size: 1.12rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(30,80,180,0.12);
+  box-shadow: 0 2px 8px rgba(30, 80, 180, 0.12);
   transition: filter 0.16s, box-shadow 0.14s;
 }
 .add-btn:hover {
   filter: brightness(1.11);
-  box-shadow: 0 4px 12px rgba(30,80,180,0.14);
+  box-shadow: 0 4px 12px rgba(30, 80, 180, 0.14);
 }
 .success-msg {
   margin-top: 2rem;

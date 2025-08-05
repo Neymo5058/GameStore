@@ -1,35 +1,40 @@
 <template>
   <div class="manager-products">
-    <NavBar />
-
     <!-- Manager toolbar -->
     <div class="manager-toolbar">
-      <router-link to="/admin" class="toolbar-button">Users</router-link>
+      <router-link
+        v-if="isAdmin"
+        to="/admin"
+        class="toolbar-button"
+      >Users</router-link>
       <router-link to="/manager/add" class="toolbar-button">Add Product</router-link>
     </div>
 
     <main class="content">
-      <div class="games-grid">
-        <div
-          class="game-card"
-          v-for="game in pagedGames"
-          :key="game.id"
-        >
-          <img :src="game.image" class="game-img" />
-          <div class="price-bar">
-            <span class="price-info">
-              <span class="title">{{ game.title }}</span>
-              <span class="price">${{ game.price }}</span>
-            </span>
-            <span class="bar-icons">
-              <!-- EDIT ICON: routes to /manager/edit/:id -->
-              <button class="icon-btn" @click.stop="editGame(game.id)">
-                <ion-icon name="create-outline"></ion-icon>
-              </button>
-              <button class="icon-btn" @click.stop="deleteGame(game.id)">
-                <ion-icon name="trash-outline"></ion-icon>
-              </button>
-            </span>
+      <LoadingSpinner v-if="gameStore.isLoading" />
+      <div v-else>
+        <p v-if="gameStore.error" class="error-msg">{{ gameStore.error }}</p>
+        <div v-else class="games-grid">
+          <div
+            class="game-card"
+            v-for="game in pagedGames"
+            :key="game._id"
+          >
+            <img :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image" class="game-img" />
+            <div class="price-bar">
+              <span class="price-info">
+                <span class="title">{{ game.title }}</span>
+                <span class="price">${{ game.price }}</span>
+              </span>
+              <span class="bar-icons">
+                <button class="icon-btn" @click.stop="editGame(game._id)">
+                  <ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="icon-btn" @click.stop="deleteGame(game._id)">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -45,48 +50,57 @@
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
-
     <Footer />
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { useGameStore } from '../../store/gamestore'
-import NavBar from '../../components/NavBar.vue'
+import { useGameStore } from '../../stores/games'
+import { useAuthStore } from '../../stores/authStore'
 import Footer from '../../components/Footer.vue'
+
 
 const router = useRouter()
 const gameStore = useGameStore()
+const auth = useAuthStore()
+
+const isAdmin = computed(() => auth.role === 'admin')
 
 onMounted(() => {
-  gameStore.fetchAll()
+  gameStore.fetchGames(page.value, pageSize)
 })
 
 const page = ref(1)
 const pageSize = 12
 
-const totalPages = computed(() =>
-  Math.ceil(gameStore.list.length / pageSize)
-)
-const pagedGames = computed(() =>
-  gameStore.list.slice((page.value - 1) * pageSize, page.value * pageSize)
-)
+watch(page, () => {
+  gameStore.fetchGames(page.value, pageSize)
+})
+
+const totalPages = computed(() => gameStore.pagination.totalPages)
+const pagedGames = computed(() => gameStore.games || [])
+
 function prevPage() { if (page.value > 1) page.value-- }
 function nextPage() { if (page.value < totalPages.value) page.value++ }
 
 function editGame(id) {
-  router.push(`/manager/edit/${id}`)
+  router.push({ name: "AddProduct", params: { id } })
 }
-function deleteGame(id) {
+async function deleteGame(id) {
   if (confirm('Delete this game?')) {
-    gameStore.deleteGame(id)
+    try {
+      await gameStore.deleteGame(id)
+    } catch (e) {
+      alert(gameStore.error || 'Failed to delete game')
+    }
   }
 }
 </script>
 
 <style scoped>
+/* Your CSS is fine, unchanged */
 .manager-products {
   background: #243248;
   min-height: 100vh;
@@ -107,6 +121,11 @@ function deleteGame(id) {
 .content {
   max-width: 1200px;
   margin: 2rem auto;
+}
+.error-msg {
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .games-grid {
   display: grid;

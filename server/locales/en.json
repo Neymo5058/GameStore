@@ -1,0 +1,10 @@
+{
+  "email_password_required": "Email and password required.",
+  "email_registered": "Email already registered.",
+  "user_registered": "User registered!",
+  "server_error": "Server error",
+  "invalid_credentials": "Invalid credentials.",
+  "login_success": "Login successful",
+  "role_invalid": "Role invalid.",
+  "already_exists": "Already exists."
+}

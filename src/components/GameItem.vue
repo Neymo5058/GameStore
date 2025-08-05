@@ -1,29 +1,29 @@
 <script setup>
-import { useRouter } from "vue-router";
 const { game } = defineProps({
   game: {
     type: Object,
     required: true,
   },
 });
-
-const router = useRouter();
-function showGameDetails() {
-  router.push(`/games/${game._id}`);
-  console.log(game);
-}
 </script>
 
 <template>
-  <div class="game-items" @click="showGameDetails">
-    <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
+  <router-link
+    class="game-items"
+    :to="`/games/${game._id || game.id}`"
+  >
+    <img
+      class="game-img"
+      :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
+      :alt="game.title"
+    />
     <div class="game-details">
       <h2 class="game-title">
         <strong>{{ game.title }}</strong>
       </h2>
       <p class="game-price">{{ game.price }} $</p>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <style scoped>

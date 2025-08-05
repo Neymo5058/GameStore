@@ -1,12 +1,27 @@
-<script setup>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-</script>
-
 <template>
-  <Header></Header>
-  <router-view></router-view>
-  <Footer id="footer"></Footer>
+  <div id="app">
+    <Header />
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import Header from './components/Header.vue'
+</script>
+
+<style>
+/* Full reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #243248;
+}
+
+/* Make sure root has no padding/margin */
+#app {
+  margin: 0;
+  padding: 0;
+  background-color: #243248;
+  min-height: 100vh;
+}
+</style>
