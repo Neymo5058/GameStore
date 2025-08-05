@@ -79,7 +79,9 @@ watch(page, () => {
   gameStore.fetchGames(page.value, pageSize)
 })
 
-const totalPages = computed(() => gameStore.pagination.totalPages)
+const totalPages = computed(
+  () => gameStore.pagination?.totalPages || gameStore.totalPages || 1
+)
 const pagedGames = computed(() => gameStore.games || [])
 
 function prevPage() { if (page.value > 1) page.value-- }

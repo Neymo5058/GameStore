@@ -61,7 +61,7 @@ const games = computed(() =>
 );
 
 const totalPages = computed(
-  () => gameStore.pagination.totalPages || 1
+  () => gameStore.pagination?.totalPages || gameStore.totalPages || 1
 );
 
 function prevPage() {
