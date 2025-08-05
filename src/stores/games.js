@@ -1,6 +1,6 @@
-
 import { defineStore } from "pinia";
 import axios from "axios";
+import { ref } from "vue";
 
 export const useGameStore = defineStore("games", {
   state: () => ({
@@ -32,9 +32,7 @@ export const useGameStore = defineStore("games", {
       try {
         const response = await axios.post("/api/games", game);
         const created =
-          (response.data.data && response.data.data.game) ||
-          response.data.game ||
-          response.data;
+          (response.data.data && response.data.data.game) || response.data.game || response.data;
         this.games.push(created);
         return created;
       } catch (err) {
@@ -50,12 +48,8 @@ export const useGameStore = defineStore("games", {
       try {
         const response = await axios.put(`/api/games/${id}`, payload);
         const updated =
-          (response.data.data && response.data.data.game) ||
-          response.data.game ||
-          response.data;
-        const index = this.games.findIndex(
-          (game) => game._id === id || game.id === id
-        );
+          (response.data.data && response.data.data.game) || response.data.game || response.data;
+        const index = this.games.findIndex((game) => game._id === id || game.id === id);
         if (index !== -1) {
           this.games[index] = { ...this.games[index], ...updated };
         }
@@ -72,9 +66,7 @@ export const useGameStore = defineStore("games", {
       this.error = null;
       try {
         await axios.delete(`/api/games/${id}`);
-        this.games = this.games.filter(
-          (game) => game._id !== id && game.id !== id
-        );
+        this.games = this.games.filter((game) => game._id !== id && game.id !== id);
       } catch (err) {
         this.error = err.response?.data?.message || "Failed";
         throw err;
