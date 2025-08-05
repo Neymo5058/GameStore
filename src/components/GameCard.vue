@@ -1,20 +1,18 @@
 <script setup>
+import GameGallery from "./GameGallery.vue";
 import { useCartStore } from "@/stores/cart";
 
-// Access the passed game prop
-const props = defineProps({
+defineProps({
   game: {
     type: Object,
     required: true,
   },
 });
 
-// Cart store instance
 const cart = useCartStore();
 
-// Add the current game to the cart
 function addToCart() {
-  cart.add(props.game);
+  cart.add(game);
 }
 
 function formatDate(date) {
@@ -30,46 +28,28 @@ function formatDate(date) {
 <template>
   <section class="game-section">
     <div class="main-container">
-      <div
-        v-if="game.gallery && game.gallery.length"
-        class="gallery-container"
-      >
-        <div class="main-img-container">
-          <img :src="`/galleries/${game.gallery[0]}`" alt="" />
-        </div>
-        <div class="image-container">
-          <div
-            v-for="(img, index) in game.gallery"
-            :key="index"
-            class="gallery-img-container"
-          >
-            <img :src="`/galleries/${img}`" alt="" />
-          </div>
-        </div>
+      <div class="gallery-container">
+        <GameGallery :game="game" />
       </div>
 
       <div class="card">
-        <img
-          class="game-img"
-          :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
-          :alt="game.title"
-        />
-        <div class="infos-container">
-          <h2 class="game-header">{{ game.title }}</h2>
-          <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>
-          <p class="game-infos"><strong>Price:</strong> {{ game.price }} $</p>
-          <p class="game-infos"><strong>Reviews:</strong> {{ game.reviews }}</p>
-          <p class="game-infos"><strong>Platform: </strong>{{ game.platform }}</p>
-          <p class="game-infos">
-            <strong>Release Date: </strong>{{ formatDate(game.releaseDate) }}
-          </p>
-          <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
-          <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
-          <button class="add-btn" @click="addToCart()">Add to Cart</button>
-        </div>
+        <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
+      <div class="infos-container">
+        <h2 class="game-header">{{ game.title }}</h2>
+        <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>
+        <p class="game-infos"><strong>Price:</strong> {{ game.price }} $</p>
+        <p class="game-infos"><strong>Reviews:</strong> {{ game.reviews }}</p>
+        <p class="game-infos"><strong>Platform: </strong>{{ game.platform }}</p>
+        <p class="game-infos">
+          <strong>Release Date: </strong>{{ formatDate(game.releaseDate) }}
+        </p>
+        <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
+        <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
+        <button class="add-cart" @click="addToCart">Add to Cart</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </template>
 
 <style scoped>
@@ -93,16 +73,6 @@ function formatDate(date) {
   line-height: 1.5;
 }
 
-.add-btn {
-  margin-top: 0.5rem;
-  background: #343a40;
-  color: #f8f9fa;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
 .main-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -118,9 +88,6 @@ function formatDate(date) {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-.image-container {
-  display: flex;
-}
 img {
   width: 100%;
   display: block;
@@ -137,5 +104,21 @@ p strong {
 .card > img {
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+.add-cart {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+  color: #f8f9fa;
+}
+
+.add-cart:hover {
+  filter: brightness(1.1);
 }
 </style>

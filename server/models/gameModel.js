@@ -53,11 +53,6 @@ const GameSchema = new mongoose.Schema(
       required: false,
       default: "https://example.com/placeholder.jpg",
     },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: false,
-    },
   },
   {
     timestamps: true,

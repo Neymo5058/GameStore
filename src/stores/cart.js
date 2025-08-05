@@ -52,7 +52,9 @@ export const useCartStore = defineStore("cart", {
             response.data;
           updated.push(game);
         } catch (e) {
-          // If the game no longer exists or request fails, skip it
+          // If the request fails, retain the existing item
+          console.error("Failed to refresh cart item", e);
+          updated.push(item);
         }
       }
       this.items = updated;

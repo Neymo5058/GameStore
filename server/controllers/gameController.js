@@ -158,12 +158,12 @@ const GameController = {
   },
   async getItems(req, res, next) {
     try {
-      const page = parseInt(req.query.page, 10) || 1;
-      const limit = parseInt(req.query.limit, 10) || 10;
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 12;
       const skip = (page - 1) * limit;
 
       const [games, totalItems] = await Promise.all([
-        GameModel.find().populate("category").skip(skip).limit(limit),
+        GameModel.find().skip(skip).limit(limit).populate("category"),
         GameModel.countDocuments(),
       ]);
 

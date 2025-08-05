@@ -11,7 +11,7 @@ const tax = computed(() => total.value * TAX_RATE);
 const totalWithTax = computed(() => total.value + tax.value);
 
 onMounted(() => {
-  cart.refresh?.();
+  cart.refresh();
 });
 
 function removeItem(id) {

@@ -6,6 +6,7 @@ import gameRoutes from "./routes/gameRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import errorHandler from "./middleware/errorHandler.js";
 
 const app = express();
 app.use(cors({ origin: true, credentials: true }));
@@ -15,6 +16,7 @@ app.use("/api/games", gameRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use(errorHandler);
 
 const MONGO_URI =
   "mongodb+srv://jonatantd2:Anjo7784@cluster1.jib4xys.mongodb.net/gamestore?retryWrites=true&w=majority&appName=Cluster1";

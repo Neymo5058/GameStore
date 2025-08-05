@@ -11,5 +11,4 @@ router.delete("/:gameId", auth, authorize('admin', 'manager'), GameController.de
 router.post("/batchCreate", auth, authorize('admin', 'manager'), GameController.batchCreate);
 router.get("/", GameController.getItems);
 router.put("/:gameId", auth, authorize('admin', 'manager'), GameController.update);
-router.delete("/:gameId", auth, authorize('admin', 'manager'), GameController.delete);
 export default router;

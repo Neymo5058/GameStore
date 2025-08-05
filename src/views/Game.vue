@@ -1,6 +1,6 @@
 <script setup>
 import GameCard from "@/components/GameCard.vue";
-
+import Spinner from "@/components/Spinner.vue";
 import axios from "axios";
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
@@ -24,9 +24,8 @@ onMounted(async () => {
 </script>
 <template>
   <div class="game-container">
-    <LoadingSpinner v-if="isLoading" />
+    <Spinner v-if="isLoading" />
     <p v-else-if="error" class="error">{{ error }}</p>
     <GameCard v-else :game="game" />
   </div>
 </template>
-<style></style>

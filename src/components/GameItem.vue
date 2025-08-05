@@ -5,6 +5,13 @@ const { game } = defineProps({
     required: true,
   },
 });
+console.log("test");
+
+const router = useRouter();
+function showGameDetails() {
+  router.push(`/games/${game._id}`);
+  console.log(game);
+}
 </script>
 
 <template>
