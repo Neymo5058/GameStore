@@ -11,7 +11,10 @@
           class="game-card-link"
         >
           <div class="game-card">
-            <img :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image" class="game-img" />
+            <img
+              :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
+              class="game-img"
+            />
             <div class="price-bar">
               <span class="price-info">
                 <span class="title">{{ game.title }}</span>
@@ -23,26 +26,19 @@
       </div>
       <div class="pagination">
         <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button
-          v-for="n in totalPages"
-          :key="n"
-          @click="page = n"
-          :class="{ active: page === n }"
-        >
+        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
           {{ n }}
         </button>
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, watch } from "vue";
 
-import Footer from "../components/Footer.vue";
-import { useGameStore } from "../stores/games"; 
+import { useGameStore } from "../stores/games";
 const gameStore = useGameStore();
 
 const page = ref(1);
@@ -56,13 +52,9 @@ watch(page, (newPage) => {
   gameStore.fetchGames(newPage, pageSize);
 });
 
-const games = computed(() =>
-  Array.isArray(gameStore.games) ? gameStore.games : []
-);
+const games = computed(() => (Array.isArray(gameStore.games) ? gameStore.games : []));
 
-const totalPages = computed(
-  () => gameStore.pagination?.totalPages || gameStore.totalPages || 1
-);
+const totalPages = computed(() => gameStore.pagination?.totalPages || gameStore.totalPages || 1);
 
 function prevPage() {
   if (page.value > 1) page.value--;

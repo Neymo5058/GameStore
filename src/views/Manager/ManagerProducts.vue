@@ -2,11 +2,7 @@
   <div class="manager-products">
     <!-- Manager toolbar -->
     <div class="manager-toolbar">
-      <router-link
-        v-if="isAdmin"
-        to="/admin"
-        class="toolbar-button"
-      >Users</router-link>
+      <router-link v-if="isAdmin" to="/admin" class="toolbar-button">Users</router-link>
       <router-link to="/manager/add" class="toolbar-button">Add Product</router-link>
     </div>
 
@@ -15,12 +11,11 @@
       <div v-else>
         <p v-if="gameStore.error" class="error-msg">{{ gameStore.error }}</p>
         <div v-else class="games-grid">
-          <div
-            class="game-card"
-            v-for="game in pagedGames"
-            :key="game._id"
-          >
-            <img :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image" class="game-img" />
+          <div class="game-card" v-for="game in pagedGames" :key="game._id">
+            <img
+              :src="game.imageUrl ? `/images/${game.imageUrl}.jpg` : game.image"
+              class="game-img"
+            />
             <div class="price-bar">
               <span class="price-info">
                 <span class="title">{{ game.title }}</span>
@@ -41,12 +36,9 @@
       <!-- Pagination -->
       <div class="pagination">
         <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button
-          v-for="n in totalPages"
-          :key="n"
-          @click="page = n"
-          :class="{ active: page === n }"
-        >{{ n }}</button>
+        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
+          {{ n }}
+        </button>
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
@@ -55,47 +47,48 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { useGameStore } from '../../stores/games'
-import { useAuthStore } from '../../stores/authStore'
-import Footer from '../../components/Footer.vue'
+import { ref, computed, onMounted, watch } from "vue";
+import { useRouter } from "vue-router";
+import { useGameStore } from "../../stores/games";
+import { useAuthStore } from "../../stores/authStore";
+import Footer from "../../components/Footer.vue";
 
+const router = useRouter();
+const gameStore = useGameStore();
+const auth = useAuthStore();
 
-const router = useRouter()
-const gameStore = useGameStore()
-const auth = useAuthStore()
-
-const isAdmin = computed(() => auth.role === 'admin')
+const isAdmin = computed(() => auth.role === "admin");
 
 onMounted(() => {
-  gameStore.fetchGames(page.value, pageSize)
-})
+  gameStore.fetchGames(page.value, pageSize);
+});
 
-const page = ref(1)
-const pageSize = 12
+const page = ref(1);
+const pageSize = 12;
 
 watch(page, () => {
-  gameStore.fetchGames(page.value, pageSize)
-})
+  gameStore.fetchGames(page.value, pageSize);
+});
 
-const totalPages = computed(
-  () => gameStore.pagination?.totalPages || gameStore.totalPages || 1
-)
-const pagedGames = computed(() => gameStore.games || [])
+const totalPages = computed(() => gameStore.pagination?.totalPages || gameStore.totalPages || 1);
+const pagedGames = computed(() => gameStore.games || []);
 
-function prevPage() { if (page.value > 1) page.value-- }
-function nextPage() { if (page.value < totalPages.value) page.value++ }
+function prevPage() {
+  if (page.value > 1) page.value--;
+}
+function nextPage() {
+  if (page.value < totalPages.value) page.value++;
+}
 
 function editGame(id) {
-  router.push({ name: "AddProduct", params: { id } })
+  router.push({ name: "AddProduct", params: { id } });
 }
 async function deleteGame(id) {
-  if (confirm('Delete this game?')) {
+  if (confirm("Delete this game?")) {
     try {
-      await gameStore.deleteGame(id)
+      await gameStore.deleteGame(id);
     } catch (e) {
-      alert(gameStore.error || 'Failed to delete game')
+      alert(gameStore.error || "Failed to delete game");
     }
   }
 }
@@ -142,7 +135,7 @@ async function deleteGame(id) {
   border-radius: 12px;
   overflow: hidden;
   background: #34495e;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   text-decoration: none;
   color: inherit;
   transition: transform 0.13s;
@@ -229,7 +222,8 @@ async function deleteGame(id) {
   margin: 2rem 0;
 }
 .pagination button {
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   border: none;
   background: #34495e;
   color: #fff;
