@@ -113,7 +113,7 @@ function nextPage() {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #535bc9;
+  background: #1864ab;
   padding: 1rem;
   display: flex;
   align-items: center;

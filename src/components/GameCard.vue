@@ -34,22 +34,22 @@ function formatDate(date) {
 
       <div class="card">
         <img class="game-img" :src="`/images/${game.imageUrl}.jpg`" :alt="game.title" />
-      <div class="infos-container">
-        <h2 class="game-header">{{ game.title }}</h2>
-        <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>
-        <p class="game-infos"><strong>Price:</strong> {{ game.price }} $</p>
-        <p class="game-infos"><strong>Reviews:</strong> {{ game.reviews }}</p>
-        <p class="game-infos"><strong>Platform: </strong>{{ game.platform }}</p>
-        <p class="game-infos">
-          <strong>Release Date: </strong>{{ formatDate(game.releaseDate) }}
-        </p>
-        <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
-        <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
-        <button class="add-cart" @click="addToCart">Add to Cart</button>
+        <div class="infos-container">
+          <h2 class="game-header">{{ game.title }}</h2>
+          <p class="game-infos"><strong>Description:</strong> {{ game.description }}</p>
+          <p class="game-infos"><strong>Price:</strong> {{ game.price }} $</p>
+          <p class="game-infos"><strong>Reviews:</strong> {{ game.reviews }}</p>
+          <p class="game-infos"><strong>Platform: </strong>{{ game.platform }}</p>
+          <p class="game-infos">
+            <strong>Release Date: </strong>{{ formatDate(game.releaseDate) }}
+          </p>
+          <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
+          <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
+          <button class="add-cart" @click="addToCart">Add to Cart</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <style scoped>

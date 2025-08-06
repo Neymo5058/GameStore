@@ -10,13 +10,14 @@ export const useGameStore = defineStore("games", {
     isLoading: false,
   }),
   actions: {
-    async fetchGames(page = 1, limit = 10) {
+    async fetchGames(page = 1, limit = 12) {
       this.isLoading = true;
       try {
-        const response = await axios.get(`/api/games?page=${page}&limit=12`);
+        const response = await axios.get(`/api/games?page=${page}&limit=${limit}`);
+
         this.games = response.data.data.games;
-        this.currentPage = response.data.data.currentPage;
-        this.totalPages = response.data.data.totalPages;
+        this.currentPage = response.data.pagination.page;
+        this.totalPages = response.data.pagination.totalPages;
       } catch (err) {
         console.error("Erreur fetch games:", err);
       } finally {

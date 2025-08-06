@@ -155,7 +155,7 @@ async function deleteGame(id) {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #535bc9;
+  background: #1864ab;
   padding: 0.9rem 0.9rem 0.85rem 0.9rem;
   display: flex;
   align-items: center;
