@@ -39,11 +39,13 @@ const GameSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required: [true, "A game must have a category"],
-    },
+    category: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+        required: [true, "A game must have a category"],
+      },
+    ],
     imageUrl: {
       type: String,
       required: false,
