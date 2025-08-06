@@ -133,9 +133,10 @@ function logout() {
   padding: 0 0.35rem;
   font-size: 0.75rem;
 }
-.header__link.active,
+
 .header__link:hover,
-.logout-btn:hover {
+.logout-btn:hover,
+.login-btn:hover {
   color: #3b82f6;
 }
 .logout-btn {
