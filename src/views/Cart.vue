@@ -36,9 +36,7 @@ function clearCart() {
             <p class="cart-game-desc">
               {{ item.description }}
             </p>
-            <div class="cart-game-meta">
-            
-            </div>
+            <div class="cart-game-meta"></div>
           </div>
           <div class="cart-game-price">
             <span>{{ item.price }}$</span>
@@ -244,7 +242,8 @@ function clearCart() {
   color: #ff6262;
 }
 
-.cart-loading, .cart-empty {
+.cart-loading,
+.cart-empty {
   color: #b2becd;
   font-size: 1.08rem;
   margin: 2rem 0;
