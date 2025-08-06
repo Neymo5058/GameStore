@@ -10,6 +10,9 @@ const { game } = defineProps({
 });
 
 const cart = useCartStore();
+const categories = Array.isArray(game.category)
+  ? game.category.map((c) => c.name || c).join(", ")
+  : game.category?.name || game.category;
 
 function addToCart() {
   cart.add(game);
@@ -44,7 +47,7 @@ function formatDate(date) {
             <strong>Release Date: </strong>{{ formatDate(game.releaseDate) }}
           </p>
           <p class="game-infos"><strong>Developper: </strong>{{ game.developer }}</p>
-          <p class="game-infos"><strong>Category: </strong>{{ game.category.name }}</p>
+          <p class="game-infos"><strong>Category: </strong>{{ categories }}</p>
           <button class="add-cart" @click="addToCart">Add to Cart</button>
         </div>
       </div>
