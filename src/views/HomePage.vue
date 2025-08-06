@@ -80,6 +80,7 @@ function nextPage() {
   justify-content: center;
   gap: 2rem;
   margin: 0 auto;
+  align-items: start;
 }
 
 .game-card-link {
@@ -88,9 +89,20 @@ function nextPage() {
   display: block;
 }
 
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  width: 100%;
+}
+
 .game-card {
   position: relative;
   width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 12px;
   overflow: hidden;
   background: #34495e;
@@ -105,23 +117,20 @@ function nextPage() {
 
 .game-img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
+  height: 160px;
+  object-fit: cover;
   background: #243248;
   display: block;
 }
 
 .price-bar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background: #1864ab;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  font-size: 1.15rem;
+  font-size: 1rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   box-sizing: border-box;
@@ -131,16 +140,15 @@ function nextPage() {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 65%;
+  max-width: 200px;
   display: inline-block;
 }
 
 .price {
   font-weight: bold;
-  margin-left: 0.5rem;
   flex-shrink: 0;
   white-space: nowrap;
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
 
 /* pagination */
