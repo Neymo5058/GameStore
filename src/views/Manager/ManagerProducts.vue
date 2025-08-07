@@ -196,7 +196,7 @@ async function deleteGame(id) {
 }
 .icon-btn {
   background: linear-gradient(to right, #06bfff, #2d73ff);
-  border: 1px solid #1a2a5a;
+  border: 0px solid #1a2a5a;
   border-radius: 6px;
   padding: 2px 8px 2px 8px;
   color: #f8f9fa;

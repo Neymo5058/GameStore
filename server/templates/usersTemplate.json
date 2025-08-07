@@ -1,0 +1,18 @@
+[
+    {
+        "email": "manager422@gamestore.com",
+        "password": "12345manager",
+        "role": "manager"
+    },
+
+    {
+        "email": "admin4222@gamestore.com",
+        "password": "12345admin",
+        "role": "admin"
+    },
+
+    {
+        "email": "user4222@gamestore.com",
+        "password": "12345user"
+    }
+]

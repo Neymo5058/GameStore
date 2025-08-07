@@ -171,7 +171,7 @@ function nextPage() {
   background: #27344a;
   color: #f8f9fa;
   border-radius: 4px;
-  border: 1px solid #3b82f6;
+  border: 0px solid #3b82f6;
   padding: 0.3rem 1.2rem 0.3rem 0.5rem;
   font-size: 1rem;
   margin-right: 0.5rem;

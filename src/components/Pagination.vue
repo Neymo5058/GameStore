@@ -36,7 +36,7 @@ const paginate = (page) => {
   justify-content: center;
   gap: 0.5rem;
   margin-top: 2rem;
-  background: #1864ab;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
   width: fit-content;

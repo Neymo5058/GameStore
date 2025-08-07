@@ -23,13 +23,6 @@
           </div>
         </router-link>
       </div>
-      <div class="pagination">
-        <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
-          {{ n }}
-        </button>
-        <button @click="nextPage" :disabled="page === totalPages">›</button>
-      </div>
     </main>
   </div>
 </template>
@@ -137,29 +130,5 @@ function nextPage() {
   flex-shrink: 0;
   white-space: nowrap;
   font-size: 1.15em;
-}
-
-/* pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 2rem 0;
-}
-.pagination button {
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: #34495e;
-  color: #f8f9fa;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.pagination button.active {
-  background: #535bc9;
-}
-.pagination button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 </style>

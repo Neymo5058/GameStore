@@ -211,7 +211,7 @@ async function saveProduct() {
   margin: 2.2rem auto 0;
 }
 .toolbar-btn {
-  background: #6186d9;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   color: #f8f9fa;
   border-radius: 4px;
   padding: 0.37rem 1.1rem;
@@ -223,7 +223,8 @@ async function saveProduct() {
 }
 .toolbar-btn:hover,
 .toolbar-btn.active {
-  background: #485d98;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
+
   opacity: 1;
 }
 .main-content {
@@ -245,7 +246,7 @@ async function saveProduct() {
 .form-title {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #5c89ed;
+  color: #1a9fff;
   margin-bottom: 2rem;
   margin-top: 0;
   letter-spacing: 0.01em;
@@ -286,7 +287,7 @@ form {
   padding: 0.72rem 1.5rem;
   border: none;
   border-radius: 6px;
-  background: linear-gradient(90deg, #6eadef 0%, #8d63ff 100%);
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   color: #f8f9fa;
   font-size: 1.12rem;
   font-weight: 600;
@@ -315,7 +316,7 @@ form {
   gap: 0.5rem;
 }
 .category-tag {
-  background: #535bc9;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   color: #f8f9fa;
   padding: 0.2rem 0.9rem;
   border-radius: 14px;
