@@ -125,8 +125,8 @@ function logout() {
 }
 .header__cart-count {
   position: absolute;
-  top: -0.4rem;
-  right: -0.7rem;
+  top: 0rem;
+  right: 0rem;
   background: #3b82f6;
   color: #fff;
   border-radius: 50%;
