@@ -4,11 +4,29 @@
       <div class="auth-container">
         <h1>{{ $t("sign_in") }}</h1>
         <div class="auth-card">
-          <label class="field-label">{{ $t("email") }}</label>
-          <input v-model="email" type="email" :placeholder="$t('email_placeholder')" />
+          <label for="email" class="field-label signin-title">
+            {{ $t("sign_in_with_email") }}
+          </label>
+          <input
+            v-model="email"
+            type="email"
+            name="email"
+            id="email"
+            :placeholder="$t('email_placeholder')"
+            required
+            autocomplete="email"
+          />
 
-          <label class="field-label uppercase">{{ $t("password") }}</label>
-          <input v-model="password" type="password" :placeholder="$t('password_placeholder')" />
+          <label for="password" class="field-label uppercase">
+            {{ $t("password") }}
+          </label>
+          <input
+            id="password"
+            v-model="password"
+            type="password"
+            :placeholder="$t('password_placeholder')"
+            required
+          />
 
           <div class="error-msg" v-if="error">{{ error }}</div>
 
@@ -120,7 +138,7 @@ async function submit() {
   margin-bottom: 1rem;
 }
 .auth-card input {
-background: linear-gradient(to right, #36393f, #2c2f33);
+  background: linear-gradient(to right, #36393f, #2c2f33);
 }
 .btn-primary {
   margin-top: 1rem;
@@ -157,7 +175,6 @@ background: linear-gradient(to right, #36393f, #2c2f33);
   font-size: 0.9rem;
   cursor: pointer;
   transition: filter 0.2s;
-  
 }
 .btn-secondary:hover {
   filter: brightness(1.1);
@@ -166,5 +183,10 @@ background: linear-gradient(to right, #36393f, #2c2f33);
   color: #ff5252;
   margin: 0.5rem 0 0.25rem 0;
   font-size: 0.98em;
+}
+
+.signin-title {
+  color: #1a9fff;
+  font-size: 1.2rem;
 }
 </style>
