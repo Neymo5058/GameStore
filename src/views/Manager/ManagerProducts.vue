@@ -94,7 +94,6 @@ async function deleteGame(id) {
 </script>
 
 <style scoped>
-/* Your CSS is fine, unchanged */
 .manager-products {
   background: #243248;
   min-height: 100vh;
@@ -104,8 +103,10 @@ async function deleteGame(id) {
   gap: 1rem;
   max-width: 1200px;
   margin: 1.5rem auto 0;
+  justify-content: center;
 }
 .toolbar-button {
+  display: flex;
   background: linear-gradient(to right, #06bfff, #2d73ff);
   padding: 0.5rem 1rem;
   color: #fff;
@@ -195,8 +196,8 @@ async function deleteGame(id) {
 }
 .icon-btn {
   background: linear-gradient(to right, #06bfff, #2d73ff);
-  border: 2px solid #1a2a5a;
-  border-radius: 6px;
+  border: 1px solid #1a2a5a;
+  border-radius: 4px;
   padding: 2px 8px 2px 8px;
   color: #fff;
   display: flex;
@@ -206,6 +207,7 @@ async function deleteGame(id) {
   transition: background 0.2s;
   margin-left: 0;
 }
+
 .icon-btn:hover {
   background: #4459d7;
   border-color: #3647a7;

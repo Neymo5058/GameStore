@@ -1,4 +1,3 @@
-
 import { createRouter, createWebHistory } from "vue-router";
 import SignUpPage from "../views/SignUpPage.vue";
 import SignInPage from "../views/SignInPage.vue";
@@ -54,10 +53,7 @@ router.beforeEach(async (to, from, next) => {
   }
 
   // If user is NOT admin/manager, prevent access to /manager
-  if (
-    to.path.startsWith("/manager") &&
-    (!userRole || !["admin", "manager"].includes(userRole))
-  ) {
+  if (to.path.startsWith("/manager") && (!userRole || !["admin", "manager"].includes(userRole))) {
     return next("/"); // Redirect them to store
   }
 
@@ -68,6 +64,5 @@ router.beforeEach(async (to, from, next) => {
 
   next();
 });
-
 
 export default router;

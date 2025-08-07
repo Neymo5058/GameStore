@@ -5,7 +5,10 @@
     <div class="toolbar">
       <router-link to="/admin" class="toolbar-btn">Manage Users</router-link>
 
-      <router-link to="/manager/add" class="toolbar-btn" :class="{ active: !isEditMode }"
+      <router-link
+        to="/manager/add"
+        class="toolbar-btn add-product-btn"
+        :class="{ active: !isEditMode }"
         >Add product</router-link
       >
     </div>
@@ -65,8 +68,6 @@
         </div>
       </div>
     </main>
-
-    <Footer />
   </div>
 </template>
 
@@ -75,7 +76,6 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import { useGameStore } from "../../stores/games";
-import Footer from "../../components/Footer.vue";
 
 const route = useRoute();
 const gameStore = useGameStore();
@@ -214,7 +214,7 @@ async function saveProduct() {
   margin: 2.2rem auto 0;
 }
 .toolbar-btn {
-  background: #6186d9;
+  background: linear-gradient(90deg, #17b8fa 0%, #5073fa 100%);
   color: #fff;
   border-radius: 4px;
   padding: 0.37rem 1.1rem;
@@ -226,7 +226,6 @@ async function saveProduct() {
 }
 .toolbar-btn:hover,
 .toolbar-btn.active {
-  background: #485d98;
   opacity: 1;
 }
 .main-content {
@@ -289,7 +288,7 @@ form {
   padding: 0.72rem 1.5rem;
   border: none;
   border-radius: 6px;
-  background: linear-gradient(90deg, #6eadef 0%, #8d63ff 100%);
+  background: linear-gradient(90deg, #16cdfa 0%, #3876fa 100%);
   color: #fff;
   font-size: 1.12rem;
   font-weight: 600;
@@ -318,12 +317,16 @@ form {
   gap: 0.5rem;
 }
 .category-tag {
-  background: #535bc9;
+  background-color: linear-gradient(90deg, #17b8fa 0%, #5073fa 100%);
   color: #fff;
   padding: 0.2rem 0.9rem;
   border-radius: 14px;
   font-size: 0.93rem;
   letter-spacing: 0.03em;
   margin-right: 0.15rem;
+}
+
+.add-product-btn {
+  background-color: linear-gradient(90deg, #17b8fa 0%, #5073fa 100%);
 }
 </style>

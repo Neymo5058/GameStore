@@ -211,7 +211,7 @@ function clearCart() {
 .process-btn {
   width: 100%;
   padding: 0.75rem 0;
-  background: linear-gradient(90deg, #5c9efc, #7888ff 60%, #8e69e6);
+  background: linear-gradient(90deg, #5c9efc, #7888ff 60%);
   color: #fff;
   font-weight: 600;
   border: none;
