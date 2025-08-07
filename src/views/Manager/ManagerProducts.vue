@@ -35,11 +35,11 @@
       </div>
       <!-- Pagination -->
       <div class="pagination">
-        <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
-          {{ n }}
-        </button>
-        <button @click="nextPage" :disabled="page === totalPages">›</button>
+        <Pagination
+          :currentPage="page"
+          :totalPages="totalPages"
+          @change-page="(newPage) => (page = newPage)"
+        />
       </div>
     </main>
     <Footer />
@@ -52,6 +52,7 @@ import { useRouter } from "vue-router";
 import { useGameStore } from "../../stores/games";
 import { useAuthStore } from "../../stores/authStore";
 import Footer from "../../components/Footer.vue";
+import Pagination from "../../components/Pagination.vue";
 
 const router = useRouter();
 const gameStore = useGameStore();

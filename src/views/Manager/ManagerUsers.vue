@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, computed, watch } from "vue";
 import { useUserStore } from "../../stores/users";
+import Pagination from "../../components/Pagination.vue";
 
 const userStore = useUserStore();
 
@@ -48,7 +49,6 @@ function nextPage() {
       <router-link to="/manager/add" class="toolbar-btn">Add product</router-link>
     </div>
     <div class="user-box">
-      
       <h2>Manage User</h2>
       <p v-if="loadError" class="error-msg">{{ loadError }}</p>
       <table v-else class="user-table">
@@ -77,16 +77,11 @@ function nextPage() {
         </tbody>
       </table>
       <div class="pagination">
-        <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button
-          v-for="n in totalPages"
-          :key="n"
-          @click="page = n"
-          :class="{ active: page === n }"
-        >
-          {{ n }}
-        </button>
-        <button @click="nextPage" :disabled="page === totalPages">›</button>
+        <Pagination
+          :currentPage="page"
+          :totalPages="totalPages"
+          @change-page="(newPage) => (page = newPage)"
+        />
       </div>
       <div class="confirm-btn-wrap">
         <button class="confirm-btn" @click="confirm">Confirm</button>
