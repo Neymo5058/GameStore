@@ -86,6 +86,8 @@ function nextPage() {
   text-decoration: none;
   color: inherit;
   display: block;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .price-info {
@@ -102,7 +104,8 @@ function nextPage() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   overflow: hidden;
   background: #34495e;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
@@ -130,8 +133,8 @@ function nextPage() {
   justify-content: space-between;
   color: #fff;
   font-size: 1rem;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   box-sizing: border-box;
 }
 
