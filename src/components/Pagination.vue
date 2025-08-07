@@ -39,6 +39,9 @@ const paginate = (page) => {
   background: #1c7ed6;
   padding: 0.4rem 0.9rem;
   border-radius: 2px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pagination button {

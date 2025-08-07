@@ -1,4 +1,3 @@
-<!-- src/views/Home.vue -->
 <template>
   <div class="home">
     <main class="content">
@@ -24,20 +23,18 @@
           </div>
         </router-link>
       </div>
-      <div class="pagination">
-        <button @click="prevPage" :disabled="page === 1">‹</button>
-        <button v-for="n in totalPages" :key="n" @click="page = n" :class="{ active: page === n }">
-          {{ n }}
-        </button>
-        <button @click="nextPage" :disabled="page === totalPages">›</button>
-      </div>
+      <Pagination
+        :currentPage="page"
+        :totalPages="totalPages"
+        @change-page="(newPage) => (page = newPage)"
+      />
     </main>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, watch } from "vue";
-
+import Pagination from "@/components/Pagination.vue";
 import { useGameStore } from "../stores/games";
 const gameStore = useGameStore();
 
@@ -55,13 +52,6 @@ watch(page, (newPage) => {
 const games = computed(() => (Array.isArray(gameStore.games) ? gameStore.games : []));
 
 const totalPages = computed(() => gameStore.pagination?.totalPages || gameStore.totalPages || 1);
-
-function prevPage() {
-  if (page.value > 1) page.value--;
-}
-function nextPage() {
-  if (page.value < totalPages.value) page.value++;
-}
 </script>
 
 <style scoped>
@@ -149,29 +139,5 @@ function nextPage() {
   flex-shrink: 0;
   white-space: nowrap;
   font-size: 1.1em;
-}
-
-/* pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 2rem 0;
-}
-.pagination button {
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: #34495e;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.pagination button.active {
-  background: #535bc9;
-}
-.pagination button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 </style>
