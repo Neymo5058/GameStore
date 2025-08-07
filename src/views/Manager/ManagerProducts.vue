@@ -42,7 +42,6 @@
         />
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
@@ -51,7 +50,6 @@ import { ref, computed, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useGameStore } from "../../stores/games";
 import { useAuthStore } from "../../stores/authStore";
-import Footer from "../../components/Footer.vue";
 import Pagination from "../../components/Pagination.vue";
 
 const router = useRouter();
@@ -108,7 +106,7 @@ async function deleteGame(id) {
   margin: 1.5rem auto 0;
 }
 .toolbar-button {
-  background: #535bc9;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   padding: 0.5rem 1rem;
   color: #fff;
   border-radius: 4px;
@@ -196,7 +194,7 @@ async function deleteGame(id) {
   flex-shrink: 0;
 }
 .icon-btn {
-  background: #2c3eeb;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   border: 2px solid #1a2a5a;
   border-radius: 6px;
   padding: 2px 8px 2px 8px;
