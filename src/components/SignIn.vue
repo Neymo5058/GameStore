@@ -90,7 +90,8 @@ async function submit() {
 <style scoped>
 /* ...use styles from previous Auth.vue answer... */
 .auth-page {
-  background: #243248;
+  background: linear-gradient(to bottom, #1b2838, #2a475e);
+
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -112,10 +113,10 @@ async function submit() {
   font-size: 1.75rem;
 }
 .auth-card {
-  background: #141419;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: #171a21;
+  padding: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
 }
@@ -144,8 +145,8 @@ async function submit() {
   margin-top: 1rem;
   padding: 0.75rem;
   border: none;
+  background-color: #1a9fff;
   border-radius: 4px;
-  background: linear-gradient(to right, #06bfff, #2d73ff);
   font-size: 1rem;
   cursor: pointer;
   transition: filter 0.2s;

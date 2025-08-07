@@ -102,8 +102,8 @@ async function handleSignup(e) {
 
 form {
   display: grid;
-  gap: 2rem;
-  width: 600px;
+  gap: 1rem;
+  width: 500px;
   background-color: #171a21;
   padding: 3rem;
   border-radius: 4px;
