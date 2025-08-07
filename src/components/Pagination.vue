@@ -36,9 +36,9 @@ const paginate = (page) => {
   justify-content: center;
   gap: 0.5rem;
   margin-top: 2rem;
-  background: #1c7ed6;
+  background: #1864ab;
   padding: 0.4rem 0.9rem;
-  border-radius: 2px;
+  border-radius: 4px;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;

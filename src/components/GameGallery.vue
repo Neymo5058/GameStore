@@ -62,5 +62,6 @@ const selectedImage = ref(gallery[0]);
 
 .thumbnail-image:hover {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px) scale(1.03);
 }
 </style>
