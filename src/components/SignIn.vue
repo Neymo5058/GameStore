@@ -139,14 +139,15 @@ async function submit() {
   background: linear-gradient(to right, #36393f, #2c2f33);
 }
 .btn-primary {
-  padding: 0.75rem;
+  padding: 0.8rem 1.6rem;
   border: none;
-  background-color: #1a9fff;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: filter 0.2s;
   color: #f8f9fa;
+  align-self: center;
 }
 .btn-primary:hover {
   filter: brightness(1.1);

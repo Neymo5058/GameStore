@@ -156,7 +156,7 @@ input[type="email"]:focus {
 .btn-signup button {
   cursor: pointer;
   background-color: #1a9fff;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 6px;
   background: linear-gradient(to right, #06bfff, #2d73ff);
   color: #f8f9fa;
