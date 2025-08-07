@@ -131,8 +131,7 @@ function nextPage() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
-  font-size: 1rem;
+  color: #f8f9fa;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
@@ -144,6 +143,7 @@ function nextPage() {
   text-overflow: ellipsis;
   max-width: 200px;
   display: inline-block;
+  font-size: 0.95rem;
 }
 
 .price {

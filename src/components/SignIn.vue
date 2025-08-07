@@ -88,10 +88,8 @@ async function submit() {
 </script>
 
 <style scoped>
-/* ...use styles from previous Auth.vue answer... */
 .auth-page {
   background: linear-gradient(to bottom, #1b2838, #2a475e);
-
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -109,8 +107,8 @@ async function submit() {
   width: 100%;
 }
 .auth-container h1 {
-  margin-bottom: 1.5rem;
   font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 .auth-card {
   background: #171a21;
@@ -119,15 +117,15 @@ async function submit() {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 .field-label {
   font-size: 0.85rem;
-  margin-bottom: 0.25rem;
+
   color: #bbb;
 }
 .field-label.uppercase {
   text-transform: uppercase;
-  margin-top: 1rem;
 }
 .auth-card input {
   background: #1f1f29;
@@ -136,13 +134,11 @@ async function submit() {
   padding: 0.5rem 0.75rem;
   color: #eee;
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 .auth-card input {
   background: linear-gradient(to right, #36393f, #2c2f33);
 }
 .btn-primary {
-  margin-top: 1rem;
   padding: 0.75rem;
   border: none;
   background-color: #1a9fff;
@@ -160,11 +156,11 @@ async function submit() {
   cursor: not-allowed;
 }
 .signup-prompt {
-  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 0.9rem;
+  margin-top: 1rem;
 }
 .btn-secondary {
   padding: 0.5rem 1rem;
@@ -182,7 +178,7 @@ async function submit() {
 }
 .error-msg {
   color: #ff5252;
-  margin: 0.5rem 0 0.25rem 0;
+
   font-size: 0.98em;
 }
 
