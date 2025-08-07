@@ -57,7 +57,6 @@ function showGameDetails() {
 
 .game-img {
   width: 100%;
-
   object-fit: cover;
 }
 </style>

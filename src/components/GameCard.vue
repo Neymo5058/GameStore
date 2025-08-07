@@ -60,6 +60,7 @@ function formatDate(date) {
   display: flex;
   padding: 2rem;
   background: linear-gradient(to bottom, #1b2838, #2a475e);
+  justify-content: center;
 }
 .card {
   display: flex;
@@ -67,6 +68,7 @@ function formatDate(date) {
   background-color: #1864ab;
   border-radius: 8px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
 }
 .infos-container {
   padding: 1rem;
