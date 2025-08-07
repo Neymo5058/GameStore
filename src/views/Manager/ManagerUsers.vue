@@ -109,7 +109,7 @@ function nextPage() {
 
 .toolbar-btn {
   background: linear-gradient(90deg, #17b8fa 0%, #5073fa 100%);
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 6px;
   padding: 0.35rem 2.1rem;
   font-size: 1rem;
@@ -147,7 +147,7 @@ function nextPage() {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #f8f9fa;
 }
 .user-table th,
 .user-table td {
@@ -169,7 +169,7 @@ function nextPage() {
 }
 .role-select {
   background: #27344a;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   border: 1px solid #3b82f6;
   padding: 0.3rem 1.2rem 0.3rem 0.5rem;
@@ -201,7 +201,7 @@ function nextPage() {
   height: 32px;
   border: none;
   background: #34495e;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -214,7 +214,7 @@ function nextPage() {
 }
 .icon-btn:hover {
   background: #233377;
-  color: #fff;
+  color: #f8f9fa;
 }
 .icon-btn.danger {
   color: #ff5252;
@@ -229,7 +229,7 @@ function nextPage() {
   border: none;
   border-radius: 8px;
   background: linear-gradient(90deg, #16cdfa 0%, #3876fa 100%);
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1.13rem;
   font-weight: bold;
   cursor: pointer;

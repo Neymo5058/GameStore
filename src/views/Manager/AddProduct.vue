@@ -65,8 +65,6 @@
         </div>
       </div>
     </main>
-
-    <Footer />
   </div>
 </template>
 
@@ -75,7 +73,6 @@ import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import { useGameStore } from "../../stores/games";
-import Footer from "../../components/Footer.vue";
 
 const route = useRoute();
 const gameStore = useGameStore();
@@ -203,7 +200,7 @@ async function saveProduct() {
 .add-product-page {
   min-height: 100vh;
   background: #243248;
-  color: #fff;
+  color: #f8f9fa;
   display: flex;
   flex-direction: column;
 }
@@ -215,7 +212,7 @@ async function saveProduct() {
 }
 .toolbar-btn {
   background: #6186d9;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   padding: 0.37rem 1.1rem;
   text-decoration: none;
@@ -290,7 +287,7 @@ form {
   border: none;
   border-radius: 6px;
   background: linear-gradient(90deg, #6eadef 0%, #8d63ff 100%);
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1.12rem;
   font-weight: 600;
   cursor: pointer;
@@ -319,7 +316,7 @@ form {
 }
 .category-tag {
   background: #535bc9;
-  color: #fff;
+  color: #f8f9fa;
   padding: 0.2rem 0.9rem;
   border-radius: 14px;
   font-size: 0.93rem;

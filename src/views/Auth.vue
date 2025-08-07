@@ -30,8 +30,6 @@
         </div>
       </div>
     </main>
-
-    <Footer />
   </div>
 </template>
 
@@ -40,7 +38,6 @@ import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "../store/authStore";
 import NavBar from "../components/NavBar.vue";
-import Footer from "../components/Footer.vue";
 import Header from "../components/Header.vue";
 
 const email = ref("");

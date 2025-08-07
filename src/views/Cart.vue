@@ -150,7 +150,7 @@ function clearCart() {
   gap: 0.6rem;
 }
 .cart-game-price span {
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -166,7 +166,7 @@ function clearCart() {
   align-items: center;
   justify-content: center;
   background: #222b3a;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -176,7 +176,7 @@ function clearCart() {
 }
 .remove-btn .circle:hover {
   background: #ff6262;
-  color: #fff;
+  color: #f8f9fa;
   border: 2px solid #ff6262;
 }
 
@@ -192,7 +192,7 @@ function clearCart() {
   border-radius: 12px;
   padding: 1.8rem 1.5rem;
   box-shadow: 0 6px 18px #0004;
-  color: #fff;
+  color: #f8f9fa;
   margin-top: 0.5rem;
 }
 .cart-summary-row {
@@ -211,13 +211,9 @@ function clearCart() {
 .process-btn {
   width: 100%;
   padding: 0.75rem 0;
-<<<<<<< Updated upstream
-  background: linear-gradient(90deg, #5c9efc, #7888ff 60%, #8e69e6);
-  color: #fff;
-=======
   background: linear-gradient(to right, #06bfff, #2d73ff);
+
   color: #f8f9fa;
->>>>>>> Stashed changes
   font-weight: 600;
   border: none;
   border-radius: 8px;

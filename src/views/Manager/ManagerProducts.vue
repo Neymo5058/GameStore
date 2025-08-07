@@ -42,7 +42,6 @@
         />
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
@@ -51,7 +50,6 @@ import { ref, computed, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useGameStore } from "../../stores/games";
 import { useAuthStore } from "../../stores/authStore";
-import Footer from "../../components/Footer.vue";
 import Pagination from "../../components/Pagination.vue";
 
 const router = useRouter();
@@ -106,11 +104,12 @@ async function deleteGame(id) {
   gap: 1rem;
   max-width: 1200px;
   margin: 1.5rem auto 0;
+  justify-content: center;
 }
 .toolbar-button {
-  background: #535bc9;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   text-decoration: none;
 }
@@ -161,7 +160,7 @@ async function deleteGame(id) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1.08rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -196,11 +195,11 @@ async function deleteGame(id) {
   flex-shrink: 0;
 }
 .icon-btn {
-  background: #2c3eeb;
-  border: 2px solid #1a2a5a;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
+  border: 1px solid #1a2a5a;
   border-radius: 6px;
   padding: 2px 8px 2px 8px;
-  color: #fff;
+  color: #f8f9fa;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -227,7 +226,7 @@ async function deleteGame(id) {
   height: 32px;
   border: none;
   background: #34495e;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   cursor: pointer;
 }

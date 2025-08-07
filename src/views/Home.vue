@@ -31,13 +31,11 @@
         <button @click="nextPage" :disabled="page === totalPages">›</button>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import Footer from "../components/Footer.vue";
 import { useGameStore } from "../stores/games";
 
 const gameStore = useGameStore();
@@ -118,7 +116,7 @@ function nextPage() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1.15rem;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -153,7 +151,7 @@ function nextPage() {
   height: 32px;
   border: none;
   background: #34495e;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   cursor: pointer;
 }

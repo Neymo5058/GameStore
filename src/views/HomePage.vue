@@ -165,7 +165,7 @@ function nextPage() {
   height: 32px;
   border: none;
   background: #34495e;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 4px;
   cursor: pointer;
 }

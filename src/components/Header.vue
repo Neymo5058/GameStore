@@ -38,30 +38,15 @@ function logout() {
           exact-active-class="active"
           >About</router-link
         >
-        <router-link
-          to="/cart"
-          class="header__link header__cart"
-          exact-active-class="active"
-        >
+        <router-link to="/cart" class="header__link header__cart" exact-active-class="active">
           <span class="header__cart-icon">🛒</span>
           <span v-if="cartCount" class="header__cart-count">{{ cartCount }}</span>
         </router-link>
 
-        <router-link
-          v-if="!isLogged"
-          to="/login"
-          class="header__link"
-          exact-active-class="active"
-        >
+        <router-link v-if="!isLogged" to="/login" class="header__link" exact-active-class="active">
           Login
         </router-link>
-        <button
-          v-else
-          @click="logout"
-          class="header__link logout-btn"
-        >
-          Logout
-        </button>
+        <button v-else @click="logout" class="header__link logout-btn">Logout</button>
       </nav>
       <div v-if="isLogged" class="header__user-box">
         Connected as: <b>{{ userEmail }}</b>
@@ -144,13 +129,8 @@ function logout() {
 }
 .header__user-box {
   background: #23283b;
-<<<<<<< Updated upstream
-  color: #fff;
-  border-radius: 5px;
-=======
   color: #f8f9fa;
-  border-radius: 4px;
->>>>>>> Stashed changes
+  border-radius: 5px;
   padding: 0.42rem 1rem;
   font-size: 0.98rem;
   margin-left: 1.2rem;
