@@ -90,7 +90,7 @@ async function submit() {
 <style scoped>
 .auth-page {
   background: linear-gradient(to bottom, #1b2838, #2a475e);
-  color: #fff;
+  color: #f8f9fa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@ async function submit() {
   border: none;
   border-radius: 4px;
   padding: 0.5rem 0.75rem;
-  color: #eee;
+  color: #f8f9fa;
   font-size: 1rem;
 }
 .auth-card input {
@@ -168,7 +168,7 @@ async function submit() {
   border: none;
   border-radius: 4px;
   background: linear-gradient(to right, #06bfff, #2d73ff);
-  color: #fff;
+  color: #f8f9fa;
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer;

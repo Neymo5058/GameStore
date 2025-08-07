@@ -64,7 +64,7 @@ async function submit() {
 <style scoped>
 .auth-page {
   background: #243248;
-  color: #fff;
+  color: #f8f9fa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ async function submit() {
   border: none;
   border-radius: 4px;
   background: linear-gradient(135deg, #6eadef, #8d63ff);
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1rem;
   cursor: pointer;
   transition: filter 0.2s;
@@ -140,7 +140,7 @@ async function submit() {
   padding: 0.75rem 1rem;
   border-radius: 5px;
   background: #323a5a;
-  color: #fff;
+  color: #f8f9fa;
   font-size: 1rem;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -165,7 +165,7 @@ async function submit() {
   border: none;
   border-radius: 4px;
   background: linear-gradient(135deg, #6eadef, #8d63ff);
-  color: #fff;
+  color: #f8f9fa;
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer;

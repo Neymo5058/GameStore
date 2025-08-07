@@ -96,7 +96,7 @@ function logout() {
   margin-right: 2px;
 }
 .brand {
-  color: #fff;
+  color: #f8f9fa;
   font-weight: bold;
   font-size: 1.7rem;
   letter-spacing: 0.5px;
@@ -128,7 +128,7 @@ function logout() {
   top: 0rem;
   right: 0rem;
   background: #3b82f6;
-  color: #fff;
+  color: #f8f9fa;
   border-radius: 50%;
   padding: 0 0.35rem;
   font-size: 0.75rem;
@@ -144,8 +144,13 @@ function logout() {
 }
 .header__user-box {
   background: #23283b;
+<<<<<<< Updated upstream
   color: #fff;
   border-radius: 5px;
+=======
+  color: #f8f9fa;
+  border-radius: 4px;
+>>>>>>> Stashed changes
   padding: 0.42rem 1rem;
   font-size: 0.98rem;
   margin-left: 1.2rem;
