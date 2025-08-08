@@ -62,8 +62,7 @@ function clearCart() {
           <span>Total</span>
           <span>{{ totalWithTax.toFixed(2) }}$</span>
         </div>
-        <button class="process-btn">Process</button>
-        <button class="clear-btn" @click="clearCart">Clear Cart</button>
+        <button class="process-btn" @click="clearCart">Process</button>
       </div>
     </aside>
   </section>

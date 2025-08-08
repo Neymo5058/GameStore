@@ -12,7 +12,6 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <style>
-/* Full reset */
 html,
 body {
   margin: 0;
@@ -20,7 +19,6 @@ body {
   background-color: #243248;
 }
 
-/* Make sure root has no padding/margin */
 #app {
   margin: 0;
   padding: 0;

@@ -11,7 +11,7 @@
     </div>
 
     <main class="main-content">
-      <LoadingSpinner v-if="gameStore.isLoading" />
+      <Spinner v-if="gameStore.isLoading" />
       <div v-else class="form-card">
         <h3 class="form-title">{{ isEditMode ? "Edit Product" : "Add Product" }}</h3>
         <form @submit.prevent="saveProduct">
@@ -71,8 +71,8 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
-
 import { useGameStore } from "../../stores/games";
+import Spinner from "../../components/Spinner.vue";
 
 const route = useRoute();
 const gameStore = useGameStore();

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <main class="content">
-      <LoadingSpinner v-if="gameStore.isLoading" />
+      <Spinner v-if="gameStore.isLoading" />
       <div v-else class="games-grid">
         <router-link
           v-for="game in games"
@@ -39,6 +39,7 @@ import { ref, computed, onMounted, watch } from "vue";
 import Pagination from "../components/Pagination.vue";
 import { useGameStore } from "../stores/games";
 const gameStore = useGameStore();
+import Spinner from "@/components/Spinner.vue";
 
 const page = ref(1);
 const pageSize = 12;
@@ -153,7 +154,6 @@ function nextPage() {
   font-size: 1.1em;
 }
 
-/* pagination */
 .pagination {
   display: flex;
   justify-content: center;

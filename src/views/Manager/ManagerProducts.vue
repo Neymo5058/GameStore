@@ -7,7 +7,7 @@
     </div>
 
     <main class="content">
-      <LoadingSpinner v-if="gameStore.isLoading" />
+      <Spinner v-if="gameStore.isLoading" />
       <div v-else>
         <p v-if="gameStore.error" class="error-msg">{{ gameStore.error }}</p>
         <div v-else class="games-grid">
@@ -51,6 +51,7 @@ import { useRouter } from "vue-router";
 import { useGameStore } from "../../stores/games";
 import { useAuthStore } from "../../stores/authStore";
 import Pagination from "../../components/Pagination.vue";
+import Spinner from "../../components/Spinner.vue";
 
 const router = useRouter();
 const gameStore = useGameStore();
@@ -94,7 +95,6 @@ async function deleteGame(id) {
 </script>
 
 <style scoped>
-/* Your CSS is fine, unchanged */
 .manager-products {
   background: #243248;
   min-height: 100vh;

@@ -189,7 +189,6 @@ function nextPage() {
   vertical-align: middle;
 }
 
-/* pagination */
 .pagination {
   display: flex;
   justify-content: center;

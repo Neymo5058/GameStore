@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
-import { useAuthStore } from "./stores/authStore"; // <--- Import your store!
+import { useAuthStore } from "./stores/authStore";
 import "./style.css";
 import i18n from "./i18n";
 
@@ -13,7 +13,6 @@ app.use(pinia);
 app.use(router);
 app.use(i18n);
 
-// Restore user session on startup (after Pinia is used!)
 const auth = useAuthStore();
 auth.restore();
 
